@@ -1,9 +1,9 @@
 package hotel.management.system;
-
+import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
 
-public class HotelManagementSystem extends JFrame {
+public class HotelManagementSystem extends JFrame implements ActionListener {
     HotelManagementSystem(){
         setBounds(300,100,728,546);   //it can be used as alt for both setSize and setLocation
        // setSize(400,400);                    it is used to control size of the frame
@@ -14,7 +14,7 @@ public class HotelManagementSystem extends JFrame {
         j1.setBounds(0,0,728,546);
         add(j1);
         JLabel j2=new JLabel("Welcome");
-        j2.setBounds(200,257,356,60);
+        j2.setBounds(200,256,356,60);
         j2.setForeground(Color.BLUE);
         j2.setFont(new Font("serif",Font.PLAIN,70));
         j1.add(j2);
@@ -22,13 +22,15 @@ public class HotelManagementSystem extends JFrame {
 
         JButton b1=new JButton("Next");
         b1.setBackground(Color.GRAY);
-        b1.setBackground(Color.WHITE);
-        b1.setBounds(300,350,90,40);
+        b1.setForeground(Color.WHITE);
+        b1.setBounds(600,460,90,40);
+       b1.addActionListener(this);
         j1.add(b1);
+
         setLayout(null);
         setVisible(true);
         while (true) {
-            j2.setVisible(false);
+            j2.setVisible(false); //it will make the welcome not to appear for first 500ml sec
             try {
                 Thread.sleep(500);
 
@@ -44,6 +46,11 @@ public class HotelManagementSystem extends JFrame {
 
 
 
+    }
+    public void  actionPerformed(ActionEvent ae)
+    {
+        new login().setVisible(true);
+        this.setVisible(false); //this function will make the welcome screen disappear
     }
     public static void main(String[] args) {
         new HotelManagementSystem();
