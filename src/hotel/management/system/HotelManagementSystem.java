@@ -27,7 +27,7 @@ public class HotelManagementSystem extends JFrame implements ActionListener {
        b1.addActionListener(this);
         j1.add(b1);
 
-        setLayout(null);
+        setLayout(null); //it has some default layout which we dont want
         setVisible(true);
         while (true) {
             j2.setVisible(false); //it will make the welcome not to appear for first 500ml sec
@@ -47,7 +47,7 @@ public class HotelManagementSystem extends JFrame implements ActionListener {
 
 
     }
-    public void  actionPerformed(ActionEvent ae)
+    public void  actionPerformed(ActionEvent ae)  //for connection welcome and login page
     {
         new login().setVisible(true);
         this.setVisible(false); //this function will make the welcome screen disappear

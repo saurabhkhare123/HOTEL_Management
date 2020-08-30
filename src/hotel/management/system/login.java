@@ -43,7 +43,7 @@ public class login extends JFrame implements ActionListener {
          b2.addActionListener(this);
          add(b2);
 
-         ImageIcon Img= new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/second.jpg"));
+         ImageIcon Img= new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/lady.jpeg"));
          Image Img2=Img.getImage().getScaledInstance(200,200,Image.SCALE_DEFAULT);
          ImageIcon Img3=new ImageIcon(Img2);
          JLabel l3=new JLabel(Img3);
@@ -70,11 +70,11 @@ public class login extends JFrame implements ActionListener {
         try{ //below statements define what would happen after adding info
            ResultSet rs= c.s.executeQuery(str);
             if (rs.next()) {
-                new HotelManagementSystem().setVisible(true);
+                new Dashboard().setVisible(true);
                 this.setVisible(false);
             } else {
                 JOptionPane.showMessageDialog(null,"Invalid username or password");
-                new HotelManagementSystem().setVisible(true);
+                this.setVisible(false);
             }
             this.setVisible(false);
         }catch(Exception e){
