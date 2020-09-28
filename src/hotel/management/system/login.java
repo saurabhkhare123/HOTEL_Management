@@ -43,7 +43,7 @@ public class login extends JFrame implements ActionListener {
          b2.addActionListener(this);
          add(b2);
 
-         ImageIcon Img= new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/lady.jpeg"));
+         ImageIcon Img= new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/lady.jpg"));
          Image Img2=Img.getImage().getScaledInstance(200,200,Image.SCALE_DEFAULT);
          ImageIcon Img3=new ImageIcon(Img2);
          JLabel l3=new JLabel(Img3);
@@ -63,6 +63,7 @@ public class login extends JFrame implements ActionListener {
        if(ae.getSource()==b1)
        {
          String username= t1.getText();
+
          String password =t2.getText();
            Conn c=new Conn();
 

@@ -1,6 +1,9 @@
 package hotel.management.system;
 import java.awt.event.*;
-import javax.swing.*;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 import java.awt.*;
 
 public class HotelManagementSystem extends JFrame implements ActionListener {
@@ -43,9 +46,6 @@ public class HotelManagementSystem extends JFrame implements ActionListener {
             } catch (Exception e) {
             }
         }
-
-
-
     }
     public void  actionPerformed(ActionEvent ae)  //for connection welcome and login page
     {

@@ -9,8 +9,8 @@ public class Conn {
   public Conn(){
       try{
 
-      Class.forName("com.mysql.jdbc.Driver");
-      c=DriverManager.getConnection("jdbc:mysql:///HotelManage","root","kutta123");
+          Class<?> aClass = Class.forName("com.mysql.cj.jdbc.Driver");
+          c=DriverManager.getConnection("jdbc:mysql://localhost:3306/projecthms?serverTimezone=UTC", "root", "");
       s=c.createStatement();
       }catch(Exception e){
           e.printStackTrace();

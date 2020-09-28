@@ -84,10 +84,10 @@ public class AddEmployee extends JFrame implements ActionListener {
         t6.setBounds(200, 280, 150, 30);
         add(t6);
 
-        JLabel adhar = new JLabel("AADHAR");
-        adhar.setFont(new Font("", Font.PLAIN, 17));
-        adhar.setBounds(60, 330, 120, 30);
-        add(adhar);
+        JLabel aadhar = new JLabel("AADHAR");
+        aadhar.setFont(new Font("", Font.PLAIN, 17));
+        aadhar.setBounds(60, 330, 120, 30);
+        add(aadhar);
 
          t7 = new JTextField();
         t7.setBounds(200, 330, 150, 30);
@@ -109,7 +109,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         b1.addActionListener(this);
         add(b1);
 
-        ImageIcon img = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/tenth.jpg"));
+        ImageIcon img = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/dash3.jpg"));
         Image img2 = img.getImage().getScaledInstance(500, 500, Image.SCALE_DEFAULT);
         ImageIcon img3 = new ImageIcon(img2);
         JLabel l1 = new JLabel(img3);
@@ -137,7 +137,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         String age = t2.getText();
         String Salary = t5.getText();
         String phone = t6.getText();
-        String adhar = t7.getText();
+        String aadhar = t7.getText();
         String email = t8.getText();
 
         String gender = null;
@@ -148,13 +148,15 @@ public class AddEmployee extends JFrame implements ActionListener {
         }
         String job = (String)c1.getSelectedItem();
         Conn c =new Conn();
-        String str = "insert into employee2 values('"+name+"','"+age+"','"+gender+"','"+job+"','"+Salary+"','"+phone+"','"+adhar+"','"+email+"')";
+        String str = "insert into employee values('"+name+"','"+age+"','"+gender+"','"+job+"','"+Salary+"','"+phone+"','"+aadhar+"','"+email+"')";
         try{
-             c.s.executeUpdate(str); // executeupdate is used when we want to add anything in database
+             c.s.executeUpdate(str); // executeupdate is used when we want to update anything in database
              JOptionPane.showMessageDialog(null,"New Employee Added");
              this.setVisible(false);
 
         }catch (Exception e){
+
+            //System.out.println(e);
 
         }
 
