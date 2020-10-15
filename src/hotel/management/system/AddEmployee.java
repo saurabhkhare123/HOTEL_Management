@@ -27,7 +27,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         age.setBounds(60, 80, 120, 30);
         add(age);
 
-         t2 = new JTextField();
+        t2 = new JTextField();
         t2.setBounds(200, 80, 150, 30);
         add(t2);
 
@@ -38,13 +38,13 @@ public class AddEmployee extends JFrame implements ActionListener {
 
         add(gender);
 
-         r1 = new JRadioButton("Male");
+        r1 = new JRadioButton("Male");
         r1.setFont(new Font("", Font.PLAIN, 13));
         r1.setBounds(200, 130, 70, 30);
         r1.setBackground(Color.WHITE);
         add(r1);
 
-         r2 = new JRadioButton("Female");
+        r2 = new JRadioButton("Female");
         r2.setFont(new Font("", Font.PLAIN, 13));
         r2.setBounds(270, 130, 90, 30);
         r2.setBackground(Color.WHITE);
@@ -61,7 +61,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         add(job);
 
         String str[] = {"Porters", "HouseKeepers", "Front Desk Clerks", "Kitchen staff", "Room Service", "Waiter/Waitress", "Manager", "Accountant", "Chef"};
-         c1 = new JComboBox(str);
+        c1 = new JComboBox(str);
         c1.setBounds(200, 180, 150, 30);
         c1.setBackground(Color.WHITE);
         add(c1);
@@ -71,7 +71,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         Salary.setBounds(60, 230, 120, 30);
         add(Salary);
 
-         t5 = new JTextField();
+        t5 = new JTextField();
         t5.setBounds(200, 230, 150, 30);
         add(t5);
 
@@ -89,7 +89,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         aadhar.setBounds(60, 330, 120, 30);
         add(aadhar);
 
-         t7 = new JTextField();
+        t7 = new JTextField();
         t7.setBounds(200, 330, 150, 30);
         add(t7);
 
@@ -98,11 +98,11 @@ public class AddEmployee extends JFrame implements ActionListener {
         email.setBounds(60, 380, 120, 30);
         add(email);
 
-         t8 = new JTextField();
+        t8 = new JTextField();
         t8.setBounds(200, 380, 150, 30);
         add(t8);
 
-         b1 = new JButton("SUBMIT");
+        b1 = new JButton("SUBMIT");
         b1.setForeground(Color.WHITE);
         b1.setBackground(Color.BLACK);
         b1.setBounds(200, 430, 150, 30);
@@ -127,7 +127,7 @@ public class AddEmployee extends JFrame implements ActionListener {
 
 
         setLayout(null);
-        setBounds(300, 100, 850, 530);
+        setBounds(350, 230, 850, 530);
         setVisible(true);
     }
 
@@ -147,16 +147,16 @@ public class AddEmployee extends JFrame implements ActionListener {
             gender = "Female";
         }
         String job = (String)c1.getSelectedItem();
-        Conn c =new Conn();
+        conn c = new conn();
         String str = "insert into employee values('"+name+"','"+age+"','"+gender+"','"+job+"','"+Salary+"','"+phone+"','"+aadhar+"','"+email+"')";
         try{
-             c.s.executeUpdate(str); // executeupdate is used when we want to update anything in database
-             JOptionPane.showMessageDialog(null,"New Employee Added");
-             this.setVisible(false);
+            c.s.executeUpdate(str); //executeUpdate is used when we want to update anything in database
+            JOptionPane.showMessageDialog(null,"New Employee Added");
+            this.setVisible(false);
 
         }catch (Exception e){
 
-            //System.out.println(e);
+            System.out.println(e);
 
         }
 

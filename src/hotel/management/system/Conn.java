@@ -1,20 +1,20 @@
 package hotel.management.system;
 
 import java.sql.*;
+public class conn {
 
-public class Conn {
-  Connection c;
-  Statement s;
+    Connection c;
+    Statement s;
+    public conn(){
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            c =DriverManager.getConnection("jdbc:mysql://localhost:3306/projecthms?serverTimezone=UTC","root","");
 
-  public Conn(){
-      try{
+            s =c.createStatement();
 
-          Class<?> aClass = Class.forName("com.mysql.cj.jdbc.Driver");
-          c=DriverManager.getConnection("jdbc:mysql://localhost:3306/projecthms?serverTimezone=UTC", "root", "");
-      s=c.createStatement();
-      }catch(Exception e){
-          e.printStackTrace();
 
-      }
-  }
+        }catch(Exception e){
+            System.out.println(e);
+        }
+    }
 }
