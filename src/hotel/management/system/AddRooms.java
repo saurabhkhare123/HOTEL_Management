@@ -18,16 +18,16 @@ public class AddRooms extends JFrame implements ActionListener{
 
 
     AddRooms(){
-        setBounds(350, 230, 850, 530);
+        setBounds(270, 150, 850, 530);
         contentPane = new JPanel();
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
-        ImageIcon i1  = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/twelve.jpg"));
+        ImageIcon i1  = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/mefg.jpeg"));
         Image i3 = i1.getImage().getScaledInstance(500, 300,Image.SCALE_DEFAULT);
         ImageIcon i2 = new ImageIcon(i3);
         JLabel l15 = new JLabel(i2);
-        l15.setBounds(400,30,500,370);
+        l15.setBounds(350,30,450,370);
         add(l15);
 
         JLabel l10 = new JLabel("Add Rooms");
