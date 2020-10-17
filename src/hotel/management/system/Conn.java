@@ -1,7 +1,7 @@
 package hotel.management.system;
 
 import java.sql.*;
-public class conn {
+ class conn {
 
     Connection c;
     Statement s;
