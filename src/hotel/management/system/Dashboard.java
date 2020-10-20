@@ -13,7 +13,6 @@ public class Dashboard extends JFrame implements ActionListener{
     Dashboard() {
 
         mb = new JMenuBar();
-        mb.setBackground(Color.CYAN);
         add(mb);
 
         m1 = new JMenu("HOTEL MANAGEMENT");
@@ -42,24 +41,24 @@ public class Dashboard extends JFrame implements ActionListener{
 
         mb.setBounds(0, 0, 1000, 30);
 
-        ImageIcon img=new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/third.jpg"));
-        Image img2=img.getImage().getScaledInstance(1400,1000,Image.SCALE_DEFAULT); //its done to change size of img
+        ImageIcon img=new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/dash.jpg"));
+        Image img2=img.getImage().getScaledInstance(1000,1000,Image.SCALE_DEFAULT); //its done to change size of img
         ImageIcon img3 = new ImageIcon(img2);  //we have to change it back to image icon
         JLabel l1= new JLabel(img3); //we need JLabel to place our photos in the frame
-        l1.setBounds(0,0,1400,1000);
+        l1.setBounds(0,0,1000,1000);
         add(l1);
 
 
         //for adding text on image
         JLabel j2=new JLabel("Vasudhaiva Kutumbakam");
         j2.setForeground(Color.BLUE);
-        j2.setFont(new Font("",Font.PLAIN,40));
-        j2.setBounds(450,80,500,50);
+        j2.setFont(new Font("",Font.PLAIN,35));
+        j2.setBounds(300,150,500,30);
         l1.add(j2);
 
 
         setLayout(null);
-        setBounds(80 ,50,1400,780);
+        setBounds(200 ,0,1000,1000);
         setVisible(true);
 
 
@@ -86,3 +85,4 @@ public class Dashboard extends JFrame implements ActionListener{
         new Dashboard().setVisible(true);
     }
 }
+
