@@ -30,9 +30,9 @@ public class AddRooms extends JFrame implements ActionListener{
         l15.setBounds(400,30,500,370);
         add(l15);
 
-        JLabel l10 = new JLabel("Add Rooms");
-        l10.setFont(new Font("Tahoma", Font.BOLD, 18));
-        l10.setBounds(194, 10, 120, 22);
+        JLabel l10 = new JLabel("ADD ROOMS");
+        l10.setFont(new Font("Tahoma", Font.BOLD, 27));
+        l10.setBounds(60, 10, 170, 25);
         contentPane.add(l10);
 
 
@@ -98,14 +98,14 @@ public class AddRooms extends JFrame implements ActionListener{
         b1 = new JButton("Add");
         b1.addActionListener(this);
         b1.setBounds(64, 321, 111, 33);
-        b1.setBackground(Color.BLACK);
+        b1.setBackground(Color.BLUE);
         b1.setForeground(Color.WHITE);
         contentPane.add(b1);
 
-        b2 = new JButton("Back");
+        b2 = new JButton("Cancel");
         b2.addActionListener(this);
         b2.setBounds(198, 321, 111, 33);
-        b2.setBackground(Color.BLACK);
+        b2.setBackground(Color.RED);
         b2.setForeground(Color.WHITE);
         contentPane.add(b2);
 
