@@ -2,7 +2,7 @@
   <library name="mysql-connector-java-8.0.21">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/mysql-connector-java-8.0.21.jar!/" />
-      <root url="jar://$USER_HOME$/Desktop/mysql-connector-java-8.0.21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../HOTEL_Management11/mysql-connector-java-8.0.21.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

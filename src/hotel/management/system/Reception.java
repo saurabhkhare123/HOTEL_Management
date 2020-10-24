@@ -114,6 +114,8 @@ public class Reception extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent ae){
 
         if(ae.getSource() == b1){
+            new AddCustomer().setVisible(true);
+            this.setVisible(false);
 
 
         }else if(ae.getSource() == b2){
@@ -132,6 +134,9 @@ public class Reception extends JFrame implements ActionListener {
 
 
         }else if(ae.getSource() == b5){
+
+            new CustomerInfo().setVisible(true);
+            this.setVisible(false);
 
 
         }else if(ae.getSource() == b6){
