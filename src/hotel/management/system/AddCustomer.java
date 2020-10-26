@@ -119,7 +119,7 @@ public class AddCustomer extends JFrame implements ActionListener{
 
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/fifth.png"));
         JLabel l10 = new JLabel(i1);
-        l10.setBounds(400,50,500,500);
+        l10.setBounds(400,50,500,600);
         add(l10);
 
         getContentPane().setBackground(Color.WHITE);

@@ -96,17 +96,17 @@ public class Reception extends JFrame implements ActionListener {
         b12.addActionListener(this);
         add(b12);
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/fourth.jpg"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/reception.jpeg"));
         Image img2 = i1.getImage().getScaledInstance(500, 450, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(img2);
         JLabel l1 = new JLabel(i3);
-        l1.setBounds(250,20,500,500);
+        l1.setBounds(265,20,500,500);
         add(l1);
 
         getContentPane().setBackground(Color.WHITE);
 
         setLayout(null);
-        setBounds(350, 230, 850, 580);
+        setBounds(300, 100, 850, 580);
         setVisible(true);
 
     }

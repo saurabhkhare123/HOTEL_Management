@@ -7,7 +7,7 @@ import javax.swing.*;    // for JFrame , setBounds etc
 import java.awt.*;      // for Color
 import java.sql.ResultSet;
 
-public class Login extends JFrame implements ActionListener {    // ActionListener is an Interface
+class Login extends JFrame implements ActionListener {    // ActionListener is an Interface
 
     JLabel l1,l2;
     JTextField t1,t2;
@@ -22,36 +22,36 @@ public class Login extends JFrame implements ActionListener {    // ActionListen
         add(l2);
 
         t1 = new JTextField();     // for text , visible to the user
-        t1.setBounds(150,20,100,30);
+        t1.setBounds(150,20,170,30);
         add(t1);
         t2 = new JPasswordField(); // for passwords , invisible to user
-        t2.setBounds(150,60,100,30);
+        t2.setBounds(150,60,170,30);
         add(t2);
 
         b1 = new JButton("Login   >>> ");
-        b1.setBounds(170,140,125,30);
+        b1.setBounds(180,140,125,30);
         b1.setBackground(Color.GREEN);
         b1.setForeground(Color.WHITE);
         b1.addActionListener(this);    // for taking the action to be performed
         add(b1);
         b2 = new JButton("Cancel XXX ");
-        b2.setBounds(10,140,125,30);
+        b2.setBounds(30,140,125,30);
         b2.setBackground(Color.RED);
         b2.setForeground(Color.WHITE);
         b2.addActionListener(this);  // for taking the action
         add(b2);
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/emp.jpg"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/lady.jpeg"));
         Image i2 = i1.getImage().getScaledInstance(220,220, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);                  //  for adding image to the frame
         JLabel l3 = new JLabel(i3);
-        l3.setBounds(320,5,220,220);
+        l3.setBounds(330,5,210,210);
         add(l3);
 
         getContentPane().setBackground(Color.WHITE);  // for coloring the complete frame as WHITE
 
         setLayout(null);
-        setBounds(500,300,580,250);
+        setBounds(400,250,580,270);
         setVisible(true);     // to show the Frame
 
     }
