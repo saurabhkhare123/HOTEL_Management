@@ -146,6 +146,8 @@ public class Reception extends JFrame implements ActionListener {
 
 
         }else if(ae.getSource() == b7){
+            new CheckOut().setVisible(true);
+            this.setVisible(false);
 
 
         }else if(ae.getSource() == b8){
@@ -158,6 +160,9 @@ public class Reception extends JFrame implements ActionListener {
 
 
         }else if(ae.getSource() == b11){
+            new SearchRoom().setVisible(true);
+            this.setVisible(false);
+
 
 
         }else if(ae.getSource() == b12){
