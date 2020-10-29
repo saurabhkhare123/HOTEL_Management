@@ -14,11 +14,11 @@ public class Room extends JFrame implements ActionListener {
 
     Room(){
 
-        ImageIcon i1  = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/seventh.jpg"));
-        //Image i3 = i1.getImage().getScaledInstance(500, 300,Image.SCALE_DEFAULT);
-        //ImageIcon i2 = new ImageIcon(i3);
+        ImageIcon i1  = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/roomie.jpeg"));
+        Image i3 = i1.getImage().getScaledInstance(500, 300,Image.SCALE_DEFAULT);
+        ImageIcon i2 = new ImageIcon(i3);
         JLabel l15 = new JLabel(i1);
-        l15.setBounds(520,30,500,370);
+        l15.setBounds(510,40,500,400);
         add(l15);
 
         t1=new JTable();
@@ -30,7 +30,7 @@ public class Room extends JFrame implements ActionListener {
         add(l1);
 
         JLabel l2=new JLabel("Availability");
-        l2.setBounds(120,10,70,20);
+        l2.setBounds(120,10,80,20);
         add(l2);
 
         JLabel l3=new JLabel("Status");
@@ -59,7 +59,7 @@ public class Room extends JFrame implements ActionListener {
 
 
         setLayout(null);
-        setBounds(450,200,1000,600);
+        setBounds(180,80,1000,600);
         setVisible(true);
 
     }

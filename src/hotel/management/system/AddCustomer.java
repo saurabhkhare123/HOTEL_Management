@@ -60,6 +60,10 @@ public class AddCustomer extends JFrame implements ActionListener{
         r2.setBounds(330,220,80,30);
         add(r2);
 
+        ButtonGroup group = new ButtonGroup();
+        group.add(r1);
+        group.add(r2);
+
         JLabel l6 = new JLabel("Country");
         l6.setBounds(50,260,200,30);
         add(l6);
@@ -105,13 +109,13 @@ public class AddCustomer extends JFrame implements ActionListener{
         t5.setBounds(250,380,150,30);
         add(t5);
 
-        JButton b1 = new JButton("Add Customer");
+         b1 = new JButton("Add Customer");
         b1.setBounds(50,480,200,50);
         b1.setBackground(Color.CYAN);
         b1.addActionListener(this);
         add(b1);
 
-        JButton b2 = new JButton("Back");
+         b2 = new JButton("Back");
         b2.setBounds(280,480,200,50);
         b2.setBackground(Color.LIGHT_GRAY);
         b2.addActionListener(this);
@@ -119,13 +123,13 @@ public class AddCustomer extends JFrame implements ActionListener{
 
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/fifth.png"));
         JLabel l10 = new JLabel(i1);
-        l10.setBounds(400,50,500,600);
+        l10.setBounds(400,50,700,400);
         add(l10);
 
         getContentPane().setBackground(Color.WHITE);
 
         setLayout(null);
-        setBounds(350,80,900,650);
+        setBounds(220,80,900,650);
         setVisible(true);
 
     }
@@ -160,7 +164,7 @@ public class AddCustomer extends JFrame implements ActionListener{
                     c.s.executeUpdate(str);
                     c.s.executeUpdate(str2);
 
-                    JOptionPane.showMessageDialog(null,"New Customer ADDED");
+                    JOptionPane.showMessageDialog(null,"New Customer Added");
                     new Reception().setVisible(true);
                     this.setVisible(false);
 

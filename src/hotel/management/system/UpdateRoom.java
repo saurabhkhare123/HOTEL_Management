@@ -20,7 +20,7 @@ public class UpdateRoom extends JFrame implements ActionListener {
         JLabel l1 = new JLabel("Update Room Status");
         l1.setFont(new Font("Tahoma",Font.PLAIN,20));
         l1.setForeground(Color.BLUE);
-        l1.setBounds(20,30,200,30);
+        l1.setBounds(20,30,250,30);
         add(l1);
 
 
@@ -88,10 +88,13 @@ public class UpdateRoom extends JFrame implements ActionListener {
         b3.addActionListener(this);
         add(b3);
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/twelve.jpg"));
-        JLabel l10 = new JLabel(i1);
-        l10.setBounds(250,-50,700,500);
-        add(l10);
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/mefg.jpeg"));
+        Image i2 = i1.getImage().getScaledInstance(500,400, Image.SCALE_DEFAULT);
+        ImageIcon i3 = new ImageIcon(i2);                  //  for adding image to the frame
+        JLabel l = new JLabel(i3);
+
+        l.setBounds(380,0,500,400);
+        add(l);
 
         setLayout(null);
         setBounds(350,200,850,400);
