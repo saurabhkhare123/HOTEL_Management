@@ -2,14 +2,13 @@ package hotel.management.system;
 
 
 import net.proteanit.sql.DbUtils;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.sql.ResultSet;
 
-public class SearchRoom extends JFrame implements ActionListener {
+ public class SearchRoom extends JFrame implements ActionListener {
     JComboBox c1;
     JCheckBox c2;
     JButton b1,b2;
@@ -29,7 +28,6 @@ public class SearchRoom extends JFrame implements ActionListener {
         add(c1);
 
         c2 = new JCheckBox("Only display Available");
-        c2.setBackground(Color.WHITE);
         c2.setBounds(650,100,200,25);
         add(c2);
 
@@ -74,7 +72,7 @@ public class SearchRoom extends JFrame implements ActionListener {
         add(l7);
 
 
-        getContentPane().setBackground(Color.WHITE);
+    //    getContentPane().setBackground(Color.WHITE);
 
         setLayout(null);
         setBounds(200,80,1000,650);
@@ -83,22 +81,21 @@ public class SearchRoom extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent ae) {
         if(ae.getSource() == b1){
-            try{
-                String str  ="select * from room where type = '"+c1.getSelectedItem()+"'";
-                String str2 = "Select * from room where available = 'Available' AND type = '"+ c1.getSelectedItem()+"'";
+            try {
+                String str = "select * from room where bed_type = '"+c1.getSelectedItem()+"'";
+                String str2 ="Select * from room where available = 'Available' AND bed_type = '"+c1.getSelectedItem()+"'";
                 conn c = new conn();
-                ResultSet rs;
+                ResultSet rs ;
 
 
-                if(c2.isSelected()){
+
+              if(c2.isSelected()){
                     rs = c.s.executeQuery(str2);
-                    t1.setModel(DbUtils.resultSetToTableModel(rs));
-                } else {
+              } else {
                     rs = c.s.executeQuery(str);
-                    t1.setModel(DbUtils.resultSetToTableModel(rs));
 
-                }
-
+              }
+                t1.setModel(DbUtils.resultSetToTableModel(rs));
 
 
             }catch (Exception e){}
@@ -112,3 +109,4 @@ public class SearchRoom extends JFrame implements ActionListener {
         new SearchRoom().setVisible(true);
     }
 }
+
