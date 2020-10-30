@@ -17,7 +17,7 @@ public class UpdateCheck extends JFrame implements ActionListener{
         JLabel l1 =new JLabel("Check In Details");
         l1.setFont(new Font("Tahoma",Font.PLAIN,25));
         l1.setForeground(Color.BLUE);
-        l1.setBounds(50,30,200,30);
+        l1.setBounds(50,30,250,30);
         add(l1);
 
         JLabel l2 =new JLabel("Customer ID");
@@ -97,7 +97,7 @@ public class UpdateCheck extends JFrame implements ActionListener{
         b3.addActionListener(this);
         add(b3);
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/nine1.png"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/checkin.jpeg"));
         Image img2 = i1.getImage().getScaledInstance(350, 250, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(img2);
         JLabel li = new JLabel(i3);
@@ -107,7 +107,7 @@ public class UpdateCheck extends JFrame implements ActionListener{
 
 
         setLayout(null);
-        setBounds(300,200,1000,500);
+        setBounds(200,100,1000,500);
         setVisible(true);
     }
 
