@@ -59,7 +59,7 @@ public class Dashboard extends JFrame implements ActionListener{
 
 
         setLayout(null);
-        setBounds(200 ,0,1000,1000);
+        setBounds(260 ,100,1000,700);
         setVisible(true);
 
 

@@ -97,7 +97,7 @@ public class UpdateCheck extends JFrame implements ActionListener{
         b3.addActionListener(this);
         add(b3);
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/checkin.jpeg"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/checko.jpeg"));
         Image img2 = i1.getImage().getScaledInstance(350, 250, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(img2);
         JLabel li = new JLabel(i3);

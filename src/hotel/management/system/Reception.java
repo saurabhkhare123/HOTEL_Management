@@ -106,7 +106,7 @@ public class Reception extends JFrame implements ActionListener {
         getContentPane().setBackground(Color.WHITE);
 
         setLayout(null);
-        setBounds(300, 100, 850, 580);
+        setBounds(300, 200, 850, 580);
         setVisible(true);
 
     }
