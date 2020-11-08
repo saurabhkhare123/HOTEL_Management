@@ -59,7 +59,7 @@ public class Room extends JFrame implements ActionListener {
 
 
         setLayout(null);
-        setBounds(180,80,1000,600);
+        setBounds(300,200,1000,600);
         setVisible(true);
 
     }
