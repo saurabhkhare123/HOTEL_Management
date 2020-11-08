@@ -5,11 +5,13 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
+
+
 public class Dashboard extends JFrame implements ActionListener{
     JMenuBar mb;
     JMenu m1,m2;
     JMenuItem i1,i2,i3,i4;
-
+    JButton L;
     Dashboard() {
 
         mb = new JMenuBar();
@@ -57,6 +59,12 @@ public class Dashboard extends JFrame implements ActionListener{
         j2.setBounds(300,150,500,30);
         l1.add(j2);
 
+        L = new JButton("Logout");   // for further entery in the Hotel management system
+        L.setBounds(0, 0, 80, 30);
+        L.setBackground(Color.RED);
+        L.setForeground(Color.WHITE);
+        L.addActionListener(this);
+        m1.add(L);
 
         setLayout(null);
         setBounds(200 ,0,1000,1000);
@@ -76,10 +84,16 @@ public class Dashboard extends JFrame implements ActionListener{
         }
         else if (ae.getActionCommand().equals("ADD DRIVERS")){
         new AddDriver().setVisible(true);
+        }else  if(ae.getSource()==L){
+            new Login().setVisible(true);
+            this.setVisible(false);
         }
 
 
     }
+
+
+
 
 
     public static void main(String[] args) {
