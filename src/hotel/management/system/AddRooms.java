@@ -18,7 +18,7 @@ public class AddRooms extends JFrame implements ActionListener{
 
 
     AddRooms(){
-        setBounds(350, 230, 850, 530);
+        setBounds(350, 230, 850, 450);
         contentPane = new JPanel();
         setContentPane(contentPane);
         contentPane.setLayout(null);
@@ -130,6 +130,7 @@ public class AddRooms extends JFrame implements ActionListener{
 
                     c.s.executeUpdate(str);
                     JOptionPane.showMessageDialog(null, "Room Successfully Added");
+                    new AdminTask().setVisible(true);
                     this.setVisible(false);
 
                 }catch(Exception ee){
@@ -137,6 +138,7 @@ public class AddRooms extends JFrame implements ActionListener{
                 }
             }
             else if(ae.getSource() == b2){
+                new AdminTask().setVisible(true);
                 this.setVisible(false);
             }
         }catch(Exception eee){

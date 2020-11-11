@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 
 public class AddEmployee extends JFrame implements ActionListener {
     JTextField t1,t2,t5,t6,t7,t8;
-    JButton b1;
+    JButton b1,b2;
     JRadioButton r1,r2;
     JComboBox c1;
     AddEmployee() {
@@ -105,9 +105,16 @@ public class AddEmployee extends JFrame implements ActionListener {
         b1 = new JButton("SUBMIT");
         b1.setForeground(Color.WHITE);
         b1.setBackground(Color.BLUE);
-        b1.setBounds(200, 430, 150, 30);
+        b1.setBounds(50, 450, 120, 30);
         b1.addActionListener(this);
         add(b1);
+
+        b2 = new JButton("BACK");
+        b2.setForeground(Color.WHITE);
+        b2.setBackground(Color.RED);
+        b2.setBounds(220, 450, 120, 30);
+        b2.addActionListener(this);
+        add(b2);
 
         ImageIcon img = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/dash3.jpg"));
         Image img2 = img.getImage().getScaledInstance(500, 500, Image.SCALE_DEFAULT);
@@ -132,36 +139,44 @@ public class AddEmployee extends JFrame implements ActionListener {
     }
 
 
-    public void actionPerformed(ActionEvent ae) {
-        String name = t1.getText();
-        String age = t2.getText();
-        String Salary = t5.getText();
-        String phone = t6.getText();
-        String aadhar = t7.getText();
-        String email = t8.getText();
-
-        String gender = null;
-        if (r1.isSelected()) {
-            gender = "Male";
-        } else if (r2.isSelected()) {
-            gender = "Female";
-        }
-        String job = (String)c1.getSelectedItem();
-        conn c = new conn();
-        String str = "insert into employee values('"+name+"','"+age+"','"+gender+"','"+job+"','"+Salary+"','"+phone+"','"+aadhar+"','"+email+"')";
+    public void actionPerformed(ActionEvent ae){
         try{
-            c.s.executeUpdate(str); //executeUpdate is used when we want to update anything in database
-            JOptionPane.showMessageDialog(null,"New Employee Added");
-            this.setVisible(false);
 
-        }catch (Exception e){
+            if(ae.getSource() == b1){
+                try{
+                    String name = t1.getText();
+                    String age = t2.getText();
+                    String Salary = t5.getText();
+                    String phone = t6.getText();
+                    String aadhar = t7.getText();
+                    String email = t8.getText();
 
-            System.out.println(e);
+                    String gender = null;
+                    if (r1.isSelected()) {
+                        gender = "Male";
+                    } else if (r2.isSelected()) {
+                        gender = "Female";
+                    }
+                    String job = (String)c1.getSelectedItem();
+                    conn c = new conn();
+                    String str = "insert into employee values('"+name+"','"+age+"','"+gender+"','"+job+"','"+Salary+"','"+phone+"','"+aadhar+"','"+email+"')";
+
+                    c.s.executeUpdate(str); //executeUpdate is used when we want to update anything in database
+                    JOptionPane.showMessageDialog(null,"New Employee Added");
+                    new AdminTask().setVisible(true);
+                    this.setVisible(false);
+
+                }catch(Exception ee){
+                    System.out.println(ee);
+                }
+            }
+            else if(ae.getSource() == b2){
+                new AdminTask().setVisible(true);
+                this.setVisible(false);
+            }
+        }catch(Exception eee){
 
         }
-
-
-
     }
 
     public static void main(String[] args) {

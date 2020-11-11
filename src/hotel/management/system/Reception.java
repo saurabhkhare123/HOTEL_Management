@@ -89,6 +89,13 @@ public class Reception extends JFrame implements ActionListener {
         b11.addActionListener(this);
         add(b11);
 
+        b12 = new JButton("BACK");
+        b12.setBackground(Color.RED);
+        b12.setForeground(Color.BLACK);
+        b12.setBounds(10,485,200,30);
+        b12.addActionListener(this);
+        add(b12);
+
 
 
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/reception.jpeg"));
@@ -168,7 +175,7 @@ public class Reception extends JFrame implements ActionListener {
 
         }else if(ae.getSource() == b12){
 
-            new Login().setVisible(true);
+            new Dashboard().setVisible(true);
             this.setVisible(false);
 
 

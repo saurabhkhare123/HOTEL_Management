@@ -152,6 +152,7 @@ public class AddDriver extends JFrame implements ActionListener{
 
                     c.s.executeUpdate(str);
                     JOptionPane.showMessageDialog(null, "Driver Successfully Added");
+                    new AdminTask().setVisible(true);
                     this.setVisible(false);
 
                 }catch(Exception ee){
@@ -159,6 +160,7 @@ public class AddDriver extends JFrame implements ActionListener{
                 }
             }
             else if(ae.getSource() == b2){
+                new AdminTask().setVisible(true);
                 this.setVisible(false);
             }
         }catch(Exception eee){
