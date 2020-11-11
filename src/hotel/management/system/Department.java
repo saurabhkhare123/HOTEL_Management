@@ -45,7 +45,7 @@ public class Department extends JFrame implements ActionListener {
         getContentPane().setBackground(Color.WHITE);
 
         setLayout(null);
-        setBounds(300,200,700,470);
+        setBounds(320,150,700,470);
         setVisible(true);
     }
 

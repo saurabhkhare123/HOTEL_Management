@@ -28,8 +28,8 @@ public class Dashboard extends JFrame implements ActionListener{
         m1.addActionListener(this);
         mb.add(m1);
 
-        m2 = new JButton("ADMIN");
-        m2.setBounds(200, 0, 250, 50);
+        m2 = new JButton("Manager");
+        m2.setBounds(350, 0, 250, 50);
         m2.setForeground(Color.BLUE);
         m2.setBackground(Color.GREEN);
         m2.addActionListener(this);
@@ -61,7 +61,7 @@ public class Dashboard extends JFrame implements ActionListener{
         mb1.add(L);
 
         setLayout(null);
-        setBounds(260 ,100,1000,700);
+        setBounds(220 ,50,1000,700);
         setVisible(true);
 
 
