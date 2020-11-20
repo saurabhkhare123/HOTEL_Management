@@ -9,7 +9,7 @@ import java.awt.*;
 
 public class AdminTask extends JFrame implements ActionListener {
 
-    JButton b1,b2,b3,b4;
+    JButton b1,b2,b3,b4,b5;
     JMenuBar mb;
     JLabel l4;
 
@@ -45,12 +45,12 @@ public class AdminTask extends JFrame implements ActionListener {
         b4.addActionListener(this);
         add(b4);
 
-        b4 = new JButton("LogOut");
-        b4.setBackground(Color.RED);
-        b4.setForeground(Color.BLACK);
-        b4.setBounds(10,193,200,30);
-        b4.addActionListener(this);
-        add(b4);
+        b5 = new JButton("LogOut");
+        b5.setBackground(Color.RED);
+        b5.setForeground(Color.BLACK);
+        b5.setBounds(10,193,200,30);
+        b5.addActionListener(this);
+        add(b5);
 
 
 
@@ -95,7 +95,7 @@ public class AdminTask extends JFrame implements ActionListener {
 
 
         }
-        else if(ae.getSource() == b4){
+        else if(ae.getSource() == b5){
 
             new Dashboard().setVisible(true);
             this.setVisible(false);

@@ -12,6 +12,12 @@ public class Reception extends JFrame implements ActionListener {
 
     Reception(){
 
+        JLabel l2 = new JLabel("RECEPTION");
+        l2.setFont(new Font("Tahoma",Font.BOLD,20));
+        l2.setForeground(Color.BLUE);
+        l2.setBounds(50,0,300,30);
+        add(l2);
+
         b1 = new JButton("New Customer Form");
         b1.setBackground(Color.GREEN);
         b1.setForeground(Color.BLACK);
