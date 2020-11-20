@@ -29,7 +29,7 @@ public class AddDriver extends JFrame implements ActionListener{
 
         JLabel l10 = new JLabel("ADD DRIVERS");
         l10.setFont(new Font("Tahoma", Font.BOLD, 25));
-        l10.setBounds(90, 10, 180, 25);
+        l10.setBounds(90, 10, 200, 25);
         contentPane.add(l10);
 
 

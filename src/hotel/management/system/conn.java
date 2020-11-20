@@ -8,7 +8,7 @@ class conn {
     public conn(){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            c =DriverManager.getConnection("jdbc:mysql://localhost:3306/projecthms?serverTimezone=UTC","root","");
+            c =DriverManager.getConnection("jdbc:mysql://localhost:3306/HotelManage?serverTimezone=UTC","root","kutta123");
 
             s =c.createStatement();
 
