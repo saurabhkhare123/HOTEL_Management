@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 public class AddDriver extends JFrame implements ActionListener{
 
     private JPanel contentPane;
-    private JTextField t1,t2,t3,t4, t5;
+    private JTextField t1,t2,t3,t4, t5,t6;
     private JComboBox comboBox, comboBox_1;
     JButton b1,b2;
     Choice c1;
@@ -89,19 +89,19 @@ public class AddDriver extends JFrame implements ActionListener{
         contentPane.add(t4);
 
 
-        JLabel l6 = new JLabel("Available");
+        JLabel l6 = new JLabel("Car Number");
         l6.setForeground(new Color(25, 25, 112));
         l6.setFont(new Font("Tahoma", Font.BOLD, 14));
         l6.setBounds(64, 270, 102, 22);
         contentPane.add(l6);
 
 
-        comboBox_1 = new JComboBox(new String[] { "Yes", "No" });
-        comboBox_1.setBounds(176, 270, 154, 20);
-        contentPane.add(comboBox_1);
+        t6 = new JTextField();
+        t6.setBounds(174, 270, 156, 20);
+        contentPane.add(t6);
 
 
-        JLabel l7 = new JLabel("Location");
+        JLabel l7 = new JLabel("DL Number");
         l7.setForeground(new Color(25, 25, 112));
         l7.setFont(new Font("Tahoma", Font.BOLD, 14));
         l7.setBounds(64, 310, 102, 22);
@@ -145,9 +145,9 @@ public class AddDriver extends JFrame implements ActionListener{
                     String gender = (String)comboBox.getSelectedItem();
                     String company  = t3.getText();
                     String brand = t4.getText();
-                    String available = (String)comboBox_1.getSelectedItem();
-                    String location = t5.getText();
-                    String str = "INSERT INTO driver values( '"+name+"', '"+age+"', '"+gender+"','"+company+"', '"+brand+"', '"+available+"','"+location+"')";
+                    String dl = t6.getText();
+                    String carNumber = t5.getText();
+                    String str = "INSERT INTO driver values( '"+name+"', '"+age+"', '"+gender+"','"+company+"', '"+brand+"', '"+dl+"','"+carNumber+"')";
 
 
                     c.s.executeUpdate(str);

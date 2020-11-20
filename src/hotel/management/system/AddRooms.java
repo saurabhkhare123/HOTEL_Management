@@ -18,7 +18,7 @@ public class AddRooms extends JFrame implements ActionListener{
 
 
     AddRooms(){
-        setBounds(300, 150, 850, 450);
+        setBounds(350, 230, 850, 450);
         contentPane = new JPanel();
         setContentPane(contentPane);
         contentPane.setLayout(null);
@@ -27,68 +27,68 @@ public class AddRooms extends JFrame implements ActionListener{
         Image i3 = i1.getImage().getScaledInstance(500, 300,Image.SCALE_DEFAULT);
         ImageIcon i2 = new ImageIcon(i3);
         JLabel l15 = new JLabel(i2);
-        l15.setBounds(350,30,450,370);
+        l15.setBounds(400,30,500,370);
         add(l15);
 
         JLabel l10 = new JLabel("ADD ROOMS");
         l10.setFont(new Font("Tahoma", Font.BOLD, 27));
-        l10.setBounds(60, 10, 190, 25);
+        l10.setBounds(60, 10, 200, 25);
         contentPane.add(l10);
 
 
 
         JLabel l1 = new JLabel("Room Number");
         l1.setForeground(new Color(25, 25, 112));
-        l1.setFont(new Font("Tahoma", Font.BOLD, 11));
-        l1.setBounds(64, 70, 130, 22);
+        l1.setFont(new Font("Tahoma", Font.BOLD, 14));
+        l1.setBounds(64, 70, 102, 22);
         contentPane.add(l1);
 
 
         t4 = new JTextField();
-        t4.setBounds(181, 70, 156, 20);
+        t4.setBounds(174, 70, 156, 20);
         contentPane.add(t4);
 
 
         JLabel l2 = new JLabel("Availability");
         l2.setForeground(new Color(25, 25, 112));
-        l2.setFont(new Font("Tahoma", Font.BOLD, 11));
+        l2.setFont(new Font("Tahoma", Font.BOLD, 14));
         l2.setBounds(64, 110, 102, 22);
         contentPane.add(l2);
 
         comboBox = new JComboBox(new String[] { "Available", "Occupied" });
-        comboBox.setBounds(181, 110, 154, 20);
+        comboBox.setBounds(176, 110, 154, 20);
         contentPane.add(comboBox);
 
 
         JLabel l3 = new JLabel("Cleaning Status");
         l3.setForeground(new Color(25, 25, 112));
-        l3.setFont(new Font("Tahoma", Font.BOLD, 11));
-        l3.setBounds(64, 150, 130, 22);
+        l3.setFont(new Font("Tahoma", Font.BOLD, 14));
+        l3.setBounds(64, 150, 102, 22);
         contentPane.add(l3);
 
         comboBox_2 = new JComboBox(new String[] { "Cleaned", "Dirty" });
-        comboBox_2.setBounds(181, 150, 154, 20);
+        comboBox_2.setBounds(176, 150, 154, 20);
         contentPane.add(comboBox_2);
 
         JLabel l4 = new JLabel("Price");
         l4.setForeground(new Color(25, 25, 112));
-        l4.setFont(new Font("Tahoma", Font.BOLD, 11));
+        l4.setFont(new Font("Tahoma", Font.BOLD, 14));
         l4.setBounds(64, 190, 102, 22);
         contentPane.add(l4);
 
         t2 = new JTextField();
-        t2.setBounds(181, 190, 156, 20);
+        t2.setBounds(174, 190, 156, 20);
         contentPane.add(t2);
 
         JLabel l5 = new JLabel("Bed Type");
         l5.setForeground(new Color(25, 25, 112));
-        l5.setFont(new Font("Tahoma", Font.BOLD, 11));
+        l5.setFont(new Font("Tahoma", Font.BOLD, 14));
         l5.setBounds(64, 230, 102, 22);
         contentPane.add(l5);
 
 
         comboBox_3 = new JComboBox(new String[] { "Single Bed", "Double Bed"});
-        comboBox_3.setBounds(181, 230, 154, 20);
+        comboBox_3.setBounds(176, 230, 154, 20);
         contentPane.add(comboBox_3);
 
 

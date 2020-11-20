@@ -60,7 +60,7 @@ public class AddEmployee extends JFrame implements ActionListener {
         job.setBounds(60, 180, 120, 30);
         add(job);
 
-        String str[] = {"Porters", "HouseKeepers", "Front Desk Clerks", "Kitchen staff", "Room Service", "Waiter/Waitress", "Manager", "Accountant", "Chef"};
+        String str[] = {"Porters", "HouseKeepers", "Front Desk Clerks", "Kitchen staff", "Room Service", "Waiter/Waitress", "Accountant", "Chef"};
         c1 = new JComboBox(str);
         c1.setBounds(200, 180, 150, 30);
         c1.setBackground(Color.WHITE);

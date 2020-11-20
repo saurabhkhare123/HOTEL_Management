@@ -29,18 +29,24 @@ public class ManagerInfo extends JFrame implements ActionListener {
         l3.setBounds(260,10,70,20);
         add(l3);
 
+        JLabel l4=new JLabel("Department");
+        l4.setBounds(380,10,70,20);
+        add(l4);
 
+        JLabel l5=new JLabel("Salary");
+        l5.setBounds(480,10,70,20);
+        add(l5);
 
         JLabel l6=new JLabel("Phone");
-        l6.setBounds(350,10,70,20);
+        l6.setBounds(600,10,70,20);
         add(l6);
 
         JLabel l7=new JLabel("Aadhar");
-        l7.setBounds(440,10,70,20);
+        l7.setBounds(720,10,70,20);
         add(l7);
 
         JLabel l8=new JLabel("Email");
-        l8.setBounds(530,10,70,20);
+        l8.setBounds(820,10,70,20);
         add(l8);
 
         b1 = new JButton("Load Data");
