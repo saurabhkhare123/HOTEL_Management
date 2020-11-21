@@ -32,6 +32,7 @@ public class PickUp extends JFrame implements ActionListener {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
        c1.setBounds(150,100,200,25);
         add(c1);
 
