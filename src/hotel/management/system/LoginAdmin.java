@@ -67,7 +67,7 @@ class LoginAdmin extends JFrame implements ActionListener {    // ActionListener
         getContentPane().setBackground(Color.WHITE);  // for coloring the complete frame as WHITE
 
         setLayout(null);
-        setBounds(400,250,580,350);
+        setBounds(400,200,580,350);
         setVisible(true);     // to show the Frame
 
     }

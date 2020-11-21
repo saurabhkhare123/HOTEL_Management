@@ -129,7 +129,7 @@ public class AddCustomer extends JFrame implements ActionListener{
         getContentPane().setBackground(Color.WHITE);
 
         setLayout(null);
-        setBounds(300,150,900,650);
+        setBounds(250,70,900,650);
         setVisible(true);
 
     }

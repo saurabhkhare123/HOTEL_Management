@@ -17,7 +17,7 @@ public class HotelManagementSystem extends JFrame implements ActionListener {
         add(l1);
 
         JLabel l2 = new JLabel("Welcome");  //for displaying the LABEL Hotel Management System
-        l2.setBounds(410, 30, 356, 60);     // Dimensioning the Text
+        l2.setBounds(200, 200, 356, 60);     // Dimensioning the Text
         l2.setForeground(Color.BLUE);   // for TEXT Coloring
         l2.setFont(new Font("serif", Font.PLAIN, 70));
         l1.add(l2);   //adding the Label on the image referred bt ImageIcon i1

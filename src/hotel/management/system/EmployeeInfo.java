@@ -3,6 +3,7 @@ package hotel.management.system;
 import net.proteanit.sql.DbUtils;
 
 import javax.swing.*;
+import javax.swing.table.TableColumnModel;
 import java.awt.*;
 import java.awt.event.*;
 import java.sql.ResultSet;
@@ -19,7 +20,7 @@ public class EmployeeInfo extends JFrame implements ActionListener {
         add(t1);
 
         JLabel l1=new JLabel("Name");
-        l1.setBounds(40,10,70,20);
+        l1.setBounds(50,10,70,20);
         add(l1);
 
         JLabel l2=new JLabel("Age");
@@ -27,28 +28,29 @@ public class EmployeeInfo extends JFrame implements ActionListener {
         add(l2);
 
         JLabel l3=new JLabel("Gender");
-        l3.setBounds(280,10,70,20);
+        l3.setBounds(250,10,70,20);
         add(l3);
 
-        JLabel l4=new JLabel("Department");
-        l4.setBounds(390,10,70,20);
+        JLabel l4=new JLabel("Depart.");
+        l4.setBounds(340,10,90,20);
         add(l4);
 
         JLabel l5=new JLabel("Salary");
-        l5.setBounds(510,10,70,20);
+        l5.setBounds(420,10,70,20);
         add(l5);
 
         JLabel l6=new JLabel("Phone");
-        l6.setBounds(620,10,70,20);
+        l6.setBounds(530,10,70,20);
         add(l6);
 
         JLabel l7=new JLabel("Aadhar");
-        l7.setBounds(740,10,70,20);
+        l7.setBounds(620,10,70,20);
         add(l7);
 
         JLabel l8=new JLabel("Email");
-        l8.setBounds(850,10,70,20);
+        l8.setBounds(780,10,70,20);
         add(l8);
+
 
         b1 = new JButton("Load Data");
         b1.setBounds(200,500,200,50);
@@ -65,7 +67,7 @@ public class EmployeeInfo extends JFrame implements ActionListener {
         getContentPane().setBackground(Color.WHITE);
 
         setLayout(null);
-        setBounds(250,150,1000,600);
+        setBounds(200,100,1000,600);
         setVisible(true);
     }
 
@@ -78,8 +80,8 @@ public class EmployeeInfo extends JFrame implements ActionListener {
                 String str = "select * from employee";
                 ResultSet rs = c.s.executeQuery(str);
                 t1.setModel(DbUtils.resultSetToTableModel(rs));
-
-
+                t1.getColumnModel().getColumn(6).setPreferredWidth(100);
+                t1.getColumnModel().getColumn(7).setPreferredWidth(170);
             }catch(Exception e){
 
             }

@@ -16,7 +16,7 @@ public class Department extends JFrame implements ActionListener {
         JLabel l = new JLabel("DEPARETMENT  -------  BUDGET ");
         l.setFont(new Font("Tahoma",Font.BOLD,30));
         l.setForeground(Color.BLUE);
-        l.setBounds(100,50,500,40);
+        l.setBounds(100,50,600,40);
         add(l);
 
 
@@ -41,7 +41,7 @@ public class Department extends JFrame implements ActionListener {
         JLabel l2 = new JLabel("Budget   ------>");
         l2.setFont(new Font("Tahoma",Font.PLAIN,20));
         l2.setForeground(Color.BLACK);
-        l2.setBounds(20,180,300,30);
+        l2.setBounds(20,180,400,30);
         add(l2);
 
         t1=new JTextField();

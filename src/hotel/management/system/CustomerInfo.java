@@ -18,11 +18,11 @@ public class CustomerInfo extends JFrame implements ActionListener {
         add(t1);
 
         JLabel l1=new JLabel("Document Type");
-        l1.setBounds(50,10,150,20);
+        l1.setBounds(40,10,150,20);
         add(l1);
 
-        JLabel l2=new JLabel("Document Number");
-        l2.setBounds(150,10,150,20);
+        JLabel l2=new JLabel("Document No.");
+        l2.setBounds(160,10,150,20);
         add(l2);
 
         JLabel l3=new JLabel("Name");
@@ -37,8 +37,8 @@ public class CustomerInfo extends JFrame implements ActionListener {
         l5.setBounds(490,10,70,20);
         add(l5);
 
-        JLabel l6=new JLabel("Room Number");
-        l6.setBounds(600,10,150,20);
+        JLabel l6=new JLabel("Room No");
+        l6.setBounds(610,10,150,20);
         add(l6);
 
         JLabel l7=new JLabel("Status");
@@ -62,7 +62,7 @@ public class CustomerInfo extends JFrame implements ActionListener {
         add(b2);
 
         setLayout(null);
-        setBounds(250,150,1000,600);
+        setBounds(200,100,1000,600);
         setVisible(true);
     }
 

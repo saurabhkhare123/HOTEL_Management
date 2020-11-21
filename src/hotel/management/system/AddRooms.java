@@ -18,7 +18,7 @@ public class AddRooms extends JFrame implements ActionListener{
 
 
     AddRooms(){
-        setBounds(350, 230, 850, 450);
+        setBounds(300, 160, 850, 450);
         contentPane = new JPanel();
         setContentPane(contentPane);
         contentPane.setLayout(null);
@@ -37,7 +37,7 @@ public class AddRooms extends JFrame implements ActionListener{
 
 
 
-        JLabel l1 = new JLabel("Room Number");
+        JLabel l1 = new JLabel("Room No.");
         l1.setForeground(new Color(25, 25, 112));
         l1.setFont(new Font("Tahoma", Font.BOLD, 14));
         l1.setBounds(64, 70, 102, 22);

@@ -159,7 +159,7 @@ public class AddEmployee extends JFrame implements ActionListener {
                     }
                     String job = (String)c1.getSelectedItem();
                     conn c = new conn();
-                    String str = "insert into employee values('"+name+"','"+age+"','"+gender+"','"+job+"','"+Salary+"','"+phone+"','"+aadhar+"','"+email+"')";
+                    String str = "insert into employee,  values('"+name+"','"+age+"','"+gender+"','"+job+"','"+Salary+"','"+phone+"','"+aadhar+"','"+email+"')";
 
                     c.s.executeUpdate(str); //executeUpdate is used when we want to update anything in database
                     JOptionPane.showMessageDialog(null,"New Employee Added");
