@@ -114,12 +114,6 @@ public class ManagerInfo extends JFrame implements ActionListener {
                     t5.setText(rs.getString("aadhar"));
                     t6.setText(rs.getString("email"));
                 }
-                /*ResultSet rs2 = c.s.executeQuery("select * from room where room_number = '"+room+"'");
-                while(rs2.next()){
-
-
-                }*/
-
             } catch (Exception e) {
             }
         }else if(ae.getSource()==b2){
