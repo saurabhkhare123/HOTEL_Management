@@ -88,7 +88,7 @@ public class CheckOut extends JFrame implements ActionListener {
             String id = c1.getSelectedItem();
             String room = j1.getText();
             String str = "delete from customer where number = '"+id+"'";
-            String str2 = "update room set available = 'Available' where room = '"+room+"'";
+            String str2 = "update room set available = 'Available' where room_number = '"+room+"'";
             conn c = new conn();
             try {
                 c.s.executeUpdate(str);
