@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 public class AddDriver extends JFrame implements ActionListener{
 
     private JPanel contentPane;
-    private JTextField t1,t2,t3,t4, t5,t6;
+    private JTextField t1,t2,t3,t4, t5,t6,t7;
     private JComboBox comboBox, comboBox_1;
     JButton b1,b2;
     Choice c1;
@@ -37,93 +37,91 @@ public class AddDriver extends JFrame implements ActionListener{
         JLabel l1 = new JLabel("Name");
         l1.setForeground(new Color(25, 25, 112));
         l1.setFont(new Font("Tahoma", Font.BOLD, 14));
-        l1.setBounds(64, 70, 102, 22);
+        l1.setBounds(64, 70, 110, 22);
         contentPane.add(l1);
-
-
         t1 = new JTextField();
-        t1.setBounds(174, 70, 156, 20);
+        t1.setBounds(220, 70, 156, 20);
         contentPane.add(t1);
 
 
         JLabel l2 = new JLabel("Age");
         l2.setForeground(new Color(25, 25, 112));
         l2.setFont(new Font("Tahoma", Font.BOLD, 14));
-        l2.setBounds(64, 110, 102, 22);
+        l2.setBounds(64, 110, 110, 22);
         contentPane.add(l2);
-
         t2 = new JTextField();
-        t2.setBounds(174, 110, 156, 20);
+        t2.setBounds(220, 110, 156, 20);
         contentPane.add(t2);
 
 
         JLabel l3 = new JLabel("Gender");
         l3.setForeground(new Color(25, 25, 112));
         l3.setFont(new Font("Tahoma", Font.BOLD, 14));
-        l3.setBounds(64, 150, 102, 22);
+        l3.setBounds(64, 150, 110, 22);
         contentPane.add(l3);
-
         comboBox = new JComboBox(new String[] { "Male", "Female" });
-        comboBox.setBounds(176, 150, 154, 20);
+        comboBox.setBounds(220, 150, 154, 20);
         contentPane.add(comboBox);
 
-        JLabel l4 = new JLabel("Car Company");
+        JLabel l4 = new JLabel("Driver Contact");
         l4.setForeground(new Color(25, 25, 112));
         l4.setFont(new Font("Tahoma", Font.BOLD, 14));
-        l4.setBounds(64, 190, 102, 22);
+        l4.setBounds(64, 190, 110, 22);
         contentPane.add(l4);
-
         t3 = new JTextField();
-        t3.setBounds(174, 190, 156, 20);
+        t3.setBounds(220, 190, 156, 20);
         contentPane.add(t3);
 
         JLabel l5 = new JLabel("Car Brand");
         l5.setForeground(new Color(25, 25, 112));
         l5.setFont(new Font("Tahoma", Font.BOLD, 14));
-        l5.setBounds(64, 230, 102, 22);
+        l5.setBounds(64, 230, 110, 22);
         contentPane.add(l5);
-
-
         t4 = new JTextField();
-        t4.setBounds(174, 230, 156, 20);
+        t4.setBounds(220, 230, 156, 20);
         contentPane.add(t4);
 
 
         JLabel l6 = new JLabel("Car Number");
         l6.setForeground(new Color(25, 25, 112));
         l6.setFont(new Font("Tahoma", Font.BOLD, 14));
-        l6.setBounds(64, 270, 102, 22);
+        l6.setBounds(64, 270, 110, 22);
         contentPane.add(l6);
-
-
         t6 = new JTextField();
-        t6.setBounds(174, 270, 156, 20);
+        t6.setBounds(220, 270, 156, 20);
         contentPane.add(t6);
 
 
         JLabel l7 = new JLabel("DL Number");
         l7.setForeground(new Color(25, 25, 112));
         l7.setFont(new Font("Tahoma", Font.BOLD, 14));
-        l7.setBounds(64, 310, 102, 22);
+        l7.setBounds(64, 310, 110, 22);
         contentPane.add(l7);
-
-
         t5 = new JTextField();
-        t5.setBounds(174, 310, 156, 20);
+        t5.setBounds(220, 310, 156, 20);
         contentPane.add(t5);
+
+        JLabel l8 = new JLabel("Availability");
+        l8.setForeground(new Color(25, 25, 112));
+        l8.setFont(new Font("Tahoma", Font.BOLD, 14));
+        l8.setBounds(64, 350, 110, 22);
+        contentPane.add(l8);
+        t7 = new JTextField();
+        t7.setBounds(220, 350, 156, 20);
+        contentPane.add(t7);
 
 
 
         b1 = new JButton("Add");
         b1.addActionListener(this);
-        b1.setBounds(64, 380, 111, 33);
+        b1.setBounds(64, 400, 111, 33);
         b1.setBackground(Color.BLUE);
         b1.setForeground(Color.WHITE);
         contentPane.add(b1);
 
         b2 = new JButton("Cancel");
         b2.addActionListener(this);
-        b2.setBounds(198, 380, 111, 33);
+        b2.setBounds(198, 400, 111, 33);
         b2.setBackground(Color.RED);
         b2.setForeground(Color.WHITE);
         contentPane.add(b2);
@@ -147,7 +145,8 @@ public class AddDriver extends JFrame implements ActionListener{
                     String brand = t4.getText();
                     String dl = t6.getText();
                     String carNumber = t5.getText();
-                    String str = "INSERT INTO driver values( '"+name+"', '"+age+"', '"+gender+"','"+company+"', '"+brand+"', '"+dl+"','"+carNumber+"')";
+                    String avail=t7.getText();
+                    String str = "INSERT INTO driver values( '"+name+"', '"+age+"', '"+gender+"','"+company+"', '"+brand+"', '"+dl+"','"+carNumber+"','"+avail+"')";
 
 
                     c.s.executeUpdate(str);
@@ -156,7 +155,7 @@ public class AddDriver extends JFrame implements ActionListener{
                     this.setVisible(false);
 
                 }catch(Exception ee){
-                    System.out.println(ee);
+                    //System.out.println(ee);
                 }
             }
             else if(ae.getSource() == b2){

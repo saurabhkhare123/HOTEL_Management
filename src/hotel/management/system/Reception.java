@@ -8,7 +8,7 @@ import java.awt.*;
 
 public class Reception extends JFrame implements ActionListener {
 
-    JButton b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12;
+    JButton b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13;
 
     Reception(){
 
@@ -76,24 +76,31 @@ public class Reception extends JFrame implements ActionListener {
         b9.addActionListener(this);
         add(b9);
 
-        b10 = new JButton("Pick Up Service");
+        b10 = new JButton("Driver Information");
         b10.setBackground(Color.GREEN);
         b10.setForeground(Color.BLACK);
         b10.setBounds(10,365,200,30);
         b10.addActionListener(this);
         add(b10);
 
+        b13 = new JButton("Update car Availability");
+        b13.setBackground(Color.GREEN);
+        b13.setForeground(Color.BLACK);
+        b13.setBounds(10,405,200,30);
+        b13.addActionListener(this);
+        add(b13);
+
         b11 = new JButton("Search Room");
         b11.setBackground(Color.GREEN);
         b11.setForeground(Color.BLACK);
-        b11.setBounds(10,405,200,30);
+        b11.setBounds(10,445,200,30);
         b11.addActionListener(this);
         add(b11);
 
         b12 = new JButton("BACK");
         b12.setBackground(Color.RED);
         b12.setForeground(Color.BLACK);
-        b12.setBounds(10,445,200,30);
+        b12.setBounds(10,485,200,30);
         b12.addActionListener(this);
         add(b12);
 
@@ -109,7 +116,7 @@ public class Reception extends JFrame implements ActionListener {
         getContentPane().setBackground(Color.WHITE);
 
         setLayout(null);
-        setBounds(250, 100, 850, 550);
+        setBounds(250, 100, 850, 570);
         setVisible(true);
 
     }
@@ -166,7 +173,9 @@ public class Reception extends JFrame implements ActionListener {
             new SearchRoom().setVisible(true);
             this.setVisible(false);
 
-
+        }else if(ae.getSource() == b13){
+            //new UpdateCar().setVisible(true);
+            this.setVisible(false);
 
         }else if(ae.getSource() == b12){
 

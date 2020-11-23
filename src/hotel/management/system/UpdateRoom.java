@@ -132,7 +132,7 @@ public class UpdateRoom extends JFrame implements ActionListener {
                 String available=t2.getText();
                 String status =t3.getText();
 
-                String str = "update room set available='"+available+"',status ='"+status+"' where room = '"+room+"'";
+                String str = "update room set available='"+available+"',status ='"+status+"' where room_number = '"+room+"'";
                 c.s.executeUpdate(str);
                 JOptionPane.showMessageDialog(null,"Room Updated Successfully");
                 new Reception().setVisible(true);

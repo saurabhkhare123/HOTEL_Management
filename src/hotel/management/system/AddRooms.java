@@ -32,7 +32,7 @@ public class AddRooms extends JFrame implements ActionListener{
 
         JLabel l10 = new JLabel("ADD ROOMS");
         l10.setFont(new Font("Tahoma", Font.BOLD, 27));
-        l10.setBounds(60, 10, 200, 25);
+        l10.setBounds(60, 10, 250, 25);
         contentPane.add(l10);
 
 

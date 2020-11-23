@@ -17,7 +17,7 @@ public class PickUp extends JFrame implements ActionListener {
         l1.setFont(new Font("Tahoma", Font.PLAIN,20));
         l1.setBounds(430,30,200,30);
         add(l1);
-        JLabel l2 = new JLabel("Type of Car");
+        JLabel l2 = new JLabel("Avaiable");
         l2.setBounds(50,100,200,20);
         add(l2);
 
