@@ -9,7 +9,7 @@ import java.awt.event.*;
 import java.sql.ResultSet;
 
 public class PickUp extends JFrame implements ActionListener {
-    Choice c1;
+    JCheckBox c2;
     JButton b1,b2;
     JTable t1;
     PickUp(){
@@ -17,24 +17,10 @@ public class PickUp extends JFrame implements ActionListener {
         l1.setFont(new Font("Tahoma", Font.PLAIN,20));
         l1.setBounds(430,30,200,30);
         add(l1);
-        JLabel l2 = new JLabel("Avaiable");
-        l2.setBounds(50,100,200,20);
-        add(l2);
 
-        c1=new Choice();
-        try{
-            conn c =new conn();
-            ResultSet rs=c.s.executeQuery("select * from driver");
-            while (rs.next()){
-                c1.add(rs.getString("brand"));
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-       c1.setBounds(150,100,200,25);
-        add(c1);
+        c2 = new JCheckBox("Only display Available");
+        c2.setBounds(650,100,200,25);
+        add(c2);
 
         t1 = new JTable();
         t1.setBounds(0,200,1000,300);
@@ -59,24 +45,26 @@ public class PickUp extends JFrame implements ActionListener {
         l3.setBounds(30,160,100,20);
         add(l3);
         JLabel l4 = new JLabel("Age");
-        l4.setBounds(200,160,100,20);
+        l4.setBounds(170,160,100,20);
         add(l4);
         JLabel l5 = new JLabel("Gender");
-        l5.setBounds(330,160,150,20);
+        l5.setBounds(280,160,150,20);
         add(l5);
-        JLabel l6 = new JLabel("Company");
-        l6.setBounds(460,160,100,20);
+        JLabel l6 = new JLabel("Contact");
+        l6.setBounds(410,160,100,20);
         add(l6);
-        JLabel l7 = new JLabel("Modal");
-        l7.setBounds(630,160,100,20);
+        JLabel l7 = new JLabel("Model");
+        l7.setBounds(530,160,100,20);
         add(l7);
-        JLabel l8 = new JLabel("Availability");
-        l8.setBounds(740,160,100,20);
+        JLabel l8 = new JLabel("Dl No.");
+        l8.setBounds(670,160,100,20);
         add(l8);
-        JLabel l9 = new JLabel("Location");
-        l9.setBounds(890,160,100,20);
+        JLabel l9 = new JLabel("Car No.");
+        l9.setBounds(790,160,100,20);
         add(l9 );
-
+        JLabel l10 = new JLabel("Availability");
+        l10.setBounds(895,160,100,20);
+        add(l10 );
 
 
         getContentPane().setBackground(Color.WHITE);
@@ -89,9 +77,17 @@ public class PickUp extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         if(ae.getSource() == b1){
             try {
-                String str = "select * from driver where brand = '"+c1.getSelectedItem()+"'";
+                String str = "select * from driver";
+                String str2 ="Select * from driver where available = 'Available' ";
                 conn c = new conn();
                 ResultSet rs = c.s.executeQuery(str);
+                t1.setModel(DbUtils.resultSetToTableModel(rs));
+                if(c2.isSelected()){
+                    rs = c.s.executeQuery(str2);
+                } else {
+                    rs = c.s.executeQuery(str);
+
+                }
                 t1.setModel(DbUtils.resultSetToTableModel(rs));
 
 

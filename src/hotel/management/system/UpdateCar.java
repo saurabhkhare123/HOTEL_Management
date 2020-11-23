@@ -72,7 +72,7 @@ public class UpdateCar extends JFrame  implements ActionListener{
         b2 = new JButton("Update");
         b2.setBackground(Color.GREEN);
         b2.setForeground(Color.BLACK);
-        b2.setBounds(130,260,80,30);
+        b2.setBounds(130,260,90,30);
         b2.addActionListener(this);
         add(b2);
 

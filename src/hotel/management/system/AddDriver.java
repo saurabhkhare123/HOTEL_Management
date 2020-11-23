@@ -66,7 +66,7 @@ public class AddDriver extends JFrame implements ActionListener{
         JLabel l4 = new JLabel("Driver Contact");
         l4.setForeground(new Color(25, 25, 112));
         l4.setFont(new Font("Tahoma", Font.BOLD, 14));
-        l4.setBounds(64, 190, 110, 22);
+        l4.setBounds(64, 190, 120, 22);
         contentPane.add(l4);
         t3 = new JTextField();
         t3.setBounds(220, 190, 156, 20);
@@ -101,14 +101,7 @@ public class AddDriver extends JFrame implements ActionListener{
         t5.setBounds(220, 310, 156, 20);
         contentPane.add(t5);
 
-        JLabel l8 = new JLabel("Availability");
-        l8.setForeground(new Color(25, 25, 112));
-        l8.setFont(new Font("Tahoma", Font.BOLD, 14));
-        l8.setBounds(64, 350, 110, 22);
-        contentPane.add(l8);
-        t7 = new JTextField();
-        t7.setBounds(220, 350, 156, 20);
-        contentPane.add(t7);
+
 
 
 
@@ -145,8 +138,8 @@ public class AddDriver extends JFrame implements ActionListener{
                     String brand = t4.getText();
                     String dl = t6.getText();
                     String carNumber = t5.getText();
-                    String avail=t7.getText();
-                    String str = "INSERT INTO driver values( '"+name+"', '"+age+"', '"+gender+"','"+company+"', '"+brand+"', '"+dl+"','"+carNumber+"','"+avail+"')";
+
+                    String str = "INSERT INTO driver values( '"+name+"', '"+age+"', '"+gender+"','"+company+"', '"+brand+"', '"+dl+"','"+carNumber+"')";
 
 
                     c.s.executeUpdate(str);

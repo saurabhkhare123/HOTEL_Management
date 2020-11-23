@@ -18,7 +18,7 @@ public class CustomerInfo extends JFrame implements ActionListener {
         add(t1);
 
         JLabel l1=new JLabel("Document Type");
-        l1.setBounds(40,10,150,20);
+        l1.setBounds(30,10,150,20);
         add(l1);
 
         JLabel l2=new JLabel("Document No.");
@@ -46,7 +46,7 @@ public class CustomerInfo extends JFrame implements ActionListener {
         add(l6);
 
         JLabel l7=new JLabel("Checked in");
-        l7.setBounds(730,10,70,20);
+        l7.setBounds(730,10,80,20);
         add(l7);
 
         JLabel l8=new JLabel("Deposit");
