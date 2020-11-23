@@ -22,27 +22,31 @@ public class CustomerInfo extends JFrame implements ActionListener {
         add(l1);
 
         JLabel l2=new JLabel("Document No.");
-        l2.setBounds(160,10,150,20);
+        l2.setBounds(140,10,150,20);
         add(l2);
 
         JLabel l3=new JLabel("Name");
-        l3.setBounds(300,10,70,20);
+        l3.setBounds(250,10,70,20);
         add(l3);
 
         JLabel l4=new JLabel("Gender");
-        l4.setBounds(400,10,70,20);
+        l4.setBounds(340,10,70,20);
         add(l4);
 
+        JLabel l9=new JLabel("Phone");
+        l9.setBounds(450,10,70,20);
+        add(l9);
+
         JLabel l5=new JLabel("Country");
-        l5.setBounds(490,10,70,20);
+        l5.setBounds(530,10,70,20);
         add(l5);
 
         JLabel l6=new JLabel("Room No");
-        l6.setBounds(610,10,150,20);
+        l6.setBounds(640,10,150,20);
         add(l6);
 
         JLabel l7=new JLabel("Checked in");
-        l7.setBounds(700,10,70,20);
+        l7.setBounds(730,10,70,20);
         add(l7);
 
         JLabel l8=new JLabel("Deposit");
