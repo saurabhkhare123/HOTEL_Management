@@ -142,6 +142,23 @@ public class UpdateCheck extends JFrame implements ActionListener{
             }catch(Exception e){}
 
         }else if(ae.getSource()==b2){
+            try{
+                conn c = new conn();
+
+                String s1 = c1.getSelectedItem();
+                String s2 = t1.getText(); //room_number;
+                String s3 = t2.getText(); //name
+                String s4 = t3.getText(); //status;
+                String s5 = t4.getText(); //deposit
+
+                c.s.executeUpdate("update customer set room = '"+s2+"', name = '"+s3+"', status = '"+s4+"', deposit = '"+s5+"' where number = '"+s1+"'");
+
+                JOptionPane.showMessageDialog(null, "Data Updated Successfully");
+                new Reception().setVisible(true);
+                setVisible(false);
+            }catch(Exception ee){
+
+            }
 
 
         }else if(ae.getSource()==b3){
