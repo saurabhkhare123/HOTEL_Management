@@ -41,8 +41,8 @@ public class CustomerInfo extends JFrame implements ActionListener {
         l6.setBounds(610,10,150,20);
         add(l6);
 
-        JLabel l7=new JLabel("Status");
-        l7.setBounds(720,10,70,20);
+        JLabel l7=new JLabel("Checked in");
+        l7.setBounds(700,10,70,20);
         add(l7);
 
         JLabel l8=new JLabel("Deposit");
