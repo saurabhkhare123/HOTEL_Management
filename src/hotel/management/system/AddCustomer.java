@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 
 public class AddCustomer extends JFrame implements ActionListener{
 
-    private JTextField t1,t2,t3,t4,t5;
+    private JTextField t1,t2,t3,t4,t5,t6;
     private JButton b1,b2;
     private JComboBox c1;
     private Choice c2;
@@ -64,16 +64,23 @@ public class AddCustomer extends JFrame implements ActionListener{
         group.add(r1);
         group.add(r2);
 
+        JLabel l11 = new JLabel("Phone Number");
+        l11.setBounds(50,260,200,30);
+        add(l11);
+        t6=new JTextField();
+        t6.setBounds(250,260,150,30);
+        add(t6);
+
         JLabel l6 = new JLabel("Country");
-        l6.setBounds(50,260,200,30);
+        l6.setBounds(50,300,200,30);
         add(l6);
 
         t3=new JTextField();
-        t3.setBounds(250,260,150,30);
+        t3.setBounds(250,300,150,30);
         add(t3);
 
         JLabel l7 = new JLabel("Allocated Room No. ");
-        l7.setBounds(50,300,200,30);
+        l7.setBounds(50,340,200,30);
         add(l7);
 
         c2=new Choice();
@@ -89,47 +96,49 @@ public class AddCustomer extends JFrame implements ActionListener{
         }catch(Exception e){
 
         }
-        c2.setBounds(250,300,150,30);
+        c2.setBounds(250,340,150,30);
         add(c2);
 
 
         JLabel l8 = new JLabel("Checked In");
-        l8.setBounds(50,340,200,30);
+        l8.setBounds(50,380,200,30);
         add(l8);
 
         t4=new JTextField();
-        t4.setBounds(250,340,150,30);
+        t4.setBounds(250,380,150,30);
         add(t4);
 
         JLabel l9 = new JLabel("Deposit");
-        l9.setBounds(50,380,200,30);
+        l9.setBounds(50,420,200,30);
         add(l9);
 
         t5=new JTextField();
-        t5.setBounds(250,380,150,30);
+        t5.setBounds(250,420,150,30);
         add(t5);
 
+
+
          b1 = new JButton("Add Customer");
-        b1.setBounds(50,480,200,50);
-        b1.setBackground(Color.CYAN);
+        b1.setBounds(50,480,150,30);
+        b1.setBackground(Color.GREEN);
         b1.addActionListener(this);
         add(b1);
 
          b2 = new JButton("Back");
-        b2.setBounds(280,480,200,50);
-        b2.setBackground(Color.LIGHT_GRAY);
+        b2.setBounds(250,480,150,30);
+        b2.setBackground(Color.RED);
         b2.addActionListener(this);
         add(b2);
 
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("hotel/management/system/icons/fifth.png"));
         JLabel l10 = new JLabel(i1);
-        l10.setBounds(400,50,700,400);
+        l10.setBounds(300,50,600,400);
         add(l10);
 
         getContentPane().setBackground(Color.WHITE);
 
         setLayout(null);
-        setBounds(250,70,900,650);
+        setBounds(400,150,750,580);
         setVisible(true);
 
     }
@@ -156,8 +165,9 @@ public class AddCustomer extends JFrame implements ActionListener{
                 String room = c2.getSelectedItem();
                 String status = t4.getText();
                 String deposit = t5.getText();
+                String phone=t6.getText();
 
-                String str = "insert into customer values('"+id+"','"+number+"','"+name+"','"+gender+"','"+country+"','"+room+"','"+status+"','"+deposit+"')";
+                String str = "insert into customer values('"+id+"','"+number+"','"+name+"','"+gender+"','"+phone+"','"+country+"','"+room+"','"+status+"','"+deposit+"')";
                 String str2 = "update room set available = 'Occupied' where room_number='"+room+"'";
                 try{
                     conn c = new conn();
