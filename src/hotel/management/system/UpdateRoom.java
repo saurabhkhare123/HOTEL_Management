@@ -112,8 +112,8 @@ public class UpdateRoom extends JFrame implements ActionListener {
             try{
                 ResultSet rs = c.s.executeQuery("select * from customer where number = '"+s1+"'");
                 while(rs.next()){
-                    t1.setText(rs.getString("room"));
-                    room = rs.getString("room");
+                    t1.setText(rs.getString("room_number"));
+                    room = rs.getString("room_number");
 
                 }
                 ResultSet rs2 = c.s.executeQuery("select * from room where room_number = '"+room+"'");
@@ -123,7 +123,7 @@ public class UpdateRoom extends JFrame implements ActionListener {
 
                 }
 
-            }catch(Exception e){}
+            }catch(Exception e){System.out.println(e);}
 
         }else if(ae.getSource()==b2){
             try{

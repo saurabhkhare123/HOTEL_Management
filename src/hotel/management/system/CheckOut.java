@@ -108,7 +108,7 @@ public class CheckOut extends JFrame implements ActionListener {
             try {
                 ResultSet rs = c.s.executeQuery(" select * from customer where number = '" + id + "'");
                 while (rs.next()) {
-                    j1.setText(rs.getString("number"));
+                    j1.setText(rs.getString("room_number"));
                 }
 
             } catch (Exception e) {

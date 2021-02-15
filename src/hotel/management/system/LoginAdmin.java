@@ -31,7 +31,7 @@ class LoginAdmin extends JFrame implements ActionListener {    // ActionListener
 
         mb.setBounds(0, 0, 580, 80);
 
-        JLabel l4 = new JLabel("   Welcome Back , ADMIN ! ");
+        JLabel l4 = new JLabel("Welcome Back ! ");
         l4.setBounds(40, 15, 450, 60);
         l4.setForeground(Color.BLUE);
         l4.setFont(new Font("serif", Font.PLAIN, 40));
@@ -92,7 +92,8 @@ class LoginAdmin extends JFrame implements ActionListener {    // ActionListener
 
             }
         }else if (ae.getSource()==b2){ // if choice is to CANCEL
-            System.exit(0);
+            new Dashboard().setVisible(true);
+            this.setVisible(false);
         }
     }
 

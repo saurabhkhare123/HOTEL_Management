@@ -136,10 +136,11 @@ public class AddDriver extends JFrame implements ActionListener{
                     String gender = (String)comboBox.getSelectedItem();
                     String company  = t3.getText();
                     String brand = t4.getText();
-                    String dl = t6.getText();
-                    String carNumber = t5.getText();
+                    String dl = t5.getText();
+                    String carNumber = t6.getText();
+                    String avail=null;
 
-                    String str = "INSERT INTO driver values( '"+name+"', '"+age+"', '"+gender+"','"+company+"', '"+brand+"', '"+dl+"','"+carNumber+"')";
+                    String str = "INSERT INTO driver values( '"+name+"', '"+age+"', '"+gender+"','"+company+"', '"+brand+"', '"+dl+"','"+carNumber+"','"+avail+"')";
 
 
                     c.s.executeUpdate(str);
@@ -148,7 +149,7 @@ public class AddDriver extends JFrame implements ActionListener{
                     this.setVisible(false);
 
                 }catch(Exception ee){
-                    //System.out.println(ee);
+                    System.out.println(ee);
                 }
             }
             else if(ae.getSource() == b2){

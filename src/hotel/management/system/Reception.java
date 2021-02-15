@@ -174,7 +174,7 @@ public class Reception extends JFrame implements ActionListener {
             this.setVisible(false);
 
         }else if(ae.getSource() == b13){
-            //new UpdateCar().setVisible(true);
+            new UpdateCar().setVisible(true);
             this.setVisible(false);
 
         }else if(ae.getSource() == b12){

@@ -123,11 +123,11 @@ public class UpdateCheck extends JFrame implements ActionListener{
                 String room = null;
                 ResultSet rs = c.s.executeQuery(str);
                 while(rs.next()){
-                    t1.setText(rs.getString("room"));
+                    t1.setText(rs.getString("room_number"));
                     t2.setText(rs.getString("name"));
                     t3.setText(rs.getString("status"));
                     t4.setText(rs.getString("deposit"));
-                    room = rs.getString("room");
+                    room = rs.getString("room_number");
                     deposit = rs.getString("deposit");
                 }
                 ResultSet rs2 = c.s.executeQuery("select * from room where room_number = '"+room+"'");
@@ -151,13 +151,13 @@ public class UpdateCheck extends JFrame implements ActionListener{
                 String s4 = t3.getText(); //status;
                 String s5 = t4.getText(); //deposit
 
-                c.s.executeUpdate("update customer set room = '"+s2+"', name = '"+s3+"', status = '"+s4+"', deposit = '"+s5+"' where number = '"+s1+"'");
+                c.s.executeUpdate("update customer set room_number = '"+s2+"', name = '"+s3+"', status = '"+s4+"', deposit = '"+s5+"' where number = '"+s1+"'");
 
                 JOptionPane.showMessageDialog(null, "Data Updated Successfully");
                 new Reception().setVisible(true);
                 setVisible(false);
             }catch(Exception ee){
-
+                System.out.println(ee);
             }
 
 
