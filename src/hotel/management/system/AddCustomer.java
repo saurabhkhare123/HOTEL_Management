@@ -202,7 +202,7 @@ public class AddCustomer extends JFrame implements ActionListener{
                         this.setVisible(false);
                     }else {
 
-                        JOptionPane.showMessageDialog(null, "kutta");
+                        JOptionPane.showMessageDialog(null, "Check the entries!");
 
                     }
 
