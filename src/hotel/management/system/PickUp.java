@@ -56,10 +56,10 @@ public class PickUp extends JFrame implements ActionListener {
         JLabel l7 = new JLabel("Model");
         l7.setBounds(530,160,100,20);
         add(l7);
-        JLabel l8 = new JLabel("Dl No.");
+        JLabel l8 = new JLabel("Car No.");
         l8.setBounds(670,160,100,20);
         add(l8);
-        JLabel l9 = new JLabel("Car No.");
+        JLabel l9 = new JLabel("Dl No.");
         l9.setBounds(790,160,100,20);
         add(l9 );
         JLabel l10 = new JLabel("Availability");

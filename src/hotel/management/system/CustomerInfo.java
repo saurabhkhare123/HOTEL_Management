@@ -37,7 +37,7 @@ public class CustomerInfo extends JFrame implements ActionListener {
         l9.setBounds(450,10,70,20);
         add(l9);
 
-        JLabel l5=new JLabel("Country");
+        JLabel l5=new JLabel("City");
         l5.setBounds(530,10,70,20);
         add(l5);
 

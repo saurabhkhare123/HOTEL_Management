@@ -27,7 +27,7 @@ public class AddCustomer extends JFrame implements ActionListener{
         l2.setBounds(50,100,200,30);
         add(l2);
 
-        c1= new JComboBox(new String[] {"Passport","Voter ID","Driving License","Aadhar Card"});
+        c1= new JComboBox(new String[] {"Voter ID","Driving License","Aadhar Card"});
         c1.setBounds(250,100,150,30);
         add(c1);
 
@@ -71,7 +71,7 @@ public class AddCustomer extends JFrame implements ActionListener{
         t6.setBounds(250,260,150,30);
         add(t6);
 
-        JLabel l6 = new JLabel("Country");
+        JLabel l6 = new JLabel("City");
         l6.setBounds(50,300,200,30);
         add(l6);
 
@@ -161,7 +161,7 @@ public class AddCustomer extends JFrame implements ActionListener{
                     gender="Female";
                 }
 
-                String country = t3.getText();
+                String city = t3.getText();
                 String room = c2.getSelectedItem();
                 String status = t4.getText();
                 String deposit = t5.getText();
@@ -178,7 +178,7 @@ public class AddCustomer extends JFrame implements ActionListener{
 
                 }
                 if((id=="Aadhar Card" && number.matches("^[2-9][0-9]{3}\\s\\d{4}\\s\\d{4}$") )|| (id=="Driving License" && number.matches("(([A-Z]{2}[0-9]{2})( )|([A-Z]{2}-[0-9]{2}))((19|20)[0-9][0-9])[0-9]{7}$"))
-                        || (id=="Passport" && number.matches("^[A-PR-WYa-pr-wy][1-9]\\\\d\\\\s?\\\\d{4}[1-9]$")) || (id=="Voter ID"&& number.matches("^[A-Z]{3}\\d{4}$"))){
+                        || (id=="Voter ID"&& number.matches("^[A-Z]{3}\\d{4}$"))){
                     t1.setBackground(Color.green);
                     Coun = 1;
 
@@ -187,7 +187,7 @@ public class AddCustomer extends JFrame implements ActionListener{
 
                 }
 
-                String str = "insert into customer values('"+id+"','"+number+"','"+name+"','"+gender+"','"+phone+"','"+country+"','"+room+"','"+status+"','"+deposit+"')";
+                String str = "insert into customer values('"+id+"','"+number+"','"+name+"','"+gender+"','"+phone+"','"+city+"','"+room+"','"+status+"','"+deposit+"')";
                 String str2 = "update room set available = 'Occupied' where room_number='"+room+"'";
                 try{
                     if(count==1 && Coun==1) {
