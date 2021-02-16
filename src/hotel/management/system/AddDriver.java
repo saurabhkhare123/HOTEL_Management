@@ -139,13 +139,11 @@ public class AddDriver extends JFrame implements ActionListener{
                     String dl = t5.getText();
                     String carNumber = t6.getText();
                     String avail=null;
-                    int count1 = 0;
-                    int count2 =0;
-                    int count3= 0;
-                    int count4 = 0;
+                    int count = 0;
+
                     if(company.matches("^(?:(?:\\+|0{0,2})91(\\s*[\\-]\\s*)?|[0]?)?[789]\\d{9}$" )) {
                         t3.setBackground(Color.green);
-                        count1 ++;
+                        count ++;
 
                     }else {
                         t3.setBackground(new Color(255, 102, 102));
@@ -154,7 +152,7 @@ public class AddDriver extends JFrame implements ActionListener{
 
                     if(Integer.parseInt(age)>18||Integer.parseInt(age)<60) {
                         t2.setBackground(Color.green);
-                        count2 ++;
+                        count ++;
 
                     }else {
                         t2.setBackground(new Color(255, 102, 102));
@@ -163,7 +161,7 @@ public class AddDriver extends JFrame implements ActionListener{
 
                     if(carNumber.matches("^[A-Z]{2}[ -][0-9]{1,2}(?: [A-Z])?(?: [A-Z]*)? [0-9]{4}$")) {
                         t6.setBackground(Color.green);
-                        count3 ++;
+                        count ++;
 
                     }else {
                         t6.setBackground(new Color(255, 102, 102));
@@ -172,14 +170,14 @@ public class AddDriver extends JFrame implements ActionListener{
 
                     if(dl.matches("(([A-Z]{2}[0-9]{2})( )|([A-Z]{2}-[0-9]{2}))((19|20)[0-9][0-9])[0-9]{7}$")) {
                         t5.setBackground(Color.green);
-                        count4 ++;
+                        count ++;
 
                     }else {
                         t5.setBackground(new Color(255, 102, 102));
 
                     }
 
-                    if(count1==1&&count2==1&&count3==1&&count4==1) {
+                    if(count==4) {
 
                         String str = "INSERT INTO driver values( '" + name + "', '" + age + "', '" + gender + "','" + company + "', '" + brand + "', '" + dl + "','" + carNumber + "','" + avail + "')";
 
