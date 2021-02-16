@@ -177,8 +177,8 @@ public class AddCustomer extends JFrame implements ActionListener{
                     t6.setBackground(new Color(255,102,102));
 
                 }
-                if(number.matches("^[2-9][0-9]{3}\\s\\d{4}\\s\\d{4}$") || number.matches("(([A-Z]{2}[0-9]{2})( )|([A-Z]{2}-[0-9]{2}))((19|20)[0-9][0-9])[0-9]{7}$")
-                        || number.matches("^[A-PR-WYa-pr-wy][1-9]\\\\d\\\\s?\\\\d{4}[1-9]$") || number.matches("^[A-Z]{3}\\d{4}$")){
+                if((id=="Aadhar Card" && number.matches("^[2-9][0-9]{3}\\s\\d{4}\\s\\d{4}$") )|| (id=="Driving License" && number.matches("(([A-Z]{2}[0-9]{2})( )|([A-Z]{2}-[0-9]{2}))((19|20)[0-9][0-9])[0-9]{7}$"))
+                        || (id=="Passport" && number.matches("^[A-PR-WYa-pr-wy][1-9]\\\\d\\\\s?\\\\d{4}[1-9]$")) || (id=="Voter ID"&& number.matches("^[A-Z]{3}\\d{4}$"))){
                     t1.setBackground(Color.green);
                     Coun = 1;
 
@@ -202,7 +202,7 @@ public class AddCustomer extends JFrame implements ActionListener{
                         this.setVisible(false);
                     }else {
 
-                        JOptionPane.showMessageDialog(null, "kutta");
+                        JOptionPane.showMessageDialog(null, "Please Check your entries");
 
                     }
 
