@@ -166,17 +166,45 @@ public class AddCustomer extends JFrame implements ActionListener{
                 String status = t4.getText();
                 String deposit = t5.getText();
                 String phone=t6.getText();
+                int count =0;
+                int Coun=0;
+
+                if(phone.matches("^(?:(?:\\+|0{0,2})91(\\s*[\\-]\\s*)?|[0]?)?[789]\\d{9}$" )) {
+                    t6.setBackground(Color.green);
+                    count = 1;
+
+                }else{
+                    t6.setBackground(new Color(255,102,102));
+
+                }
+                if(number.matches("^[2-9][0-9]{3}\\s\\d{4}\\s\\d{4}$") || number.matches("(([A-Z]{2}[0-9]{2})( )|([A-Z]{2}-[0-9]{2}))((19|20)[0-9][0-9])[0-9]{7}$")
+                        || number.matches("^[A-PR-WYa-pr-wy][1-9]\\\\d\\\\s?\\\\d{4}[1-9]$") || number.matches("^[A-Z]{3}\\d{4}$")){
+                    t1.setBackground(Color.green);
+                    Coun = 1;
+
+                }else{
+                    t1.setBackground(new Color(255,102,102));
+
+                }
 
                 String str = "insert into customer values('"+id+"','"+number+"','"+name+"','"+gender+"','"+phone+"','"+country+"','"+room+"','"+status+"','"+deposit+"')";
                 String str2 = "update room set available = 'Occupied' where room_number='"+room+"'";
                 try{
-                    conn c = new conn();
-                    c.s.executeUpdate(str);
-                    c.s.executeUpdate(str2);
+                    if(count==1 && Coun==1) {
 
-                    JOptionPane.showMessageDialog(null,"New Customer Added");
-                    new Reception().setVisible(true);
-                    this.setVisible(false);
+
+                        conn c = new conn();
+                        c.s.executeUpdate(str);
+                        c.s.executeUpdate(str2);
+
+                        JOptionPane.showMessageDialog(null, "New Customer Added");
+                        new Reception().setVisible(true);
+                        this.setVisible(false);
+                    }else {
+
+                        JOptionPane.showMessageDialog(null, "kutta");
+
+                    }
 
                 }catch(Exception e){
 
