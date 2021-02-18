@@ -126,12 +126,15 @@ public class AddRooms extends JFrame implements ActionListener{
                     String price  = t2.getText();
                     String type = (String)comboBox_3.getSelectedItem();
                     String str = "INSERT INTO room values( '"+room+"', '"+available+"', '"+status+"','"+price+"', '"+type+"')";
-
+if(!t4.getText().isEmpty() && !t2.getText().isEmpty()) {
 
                     c.s.executeUpdate(str);
                     JOptionPane.showMessageDialog(null, "Room Successfully Added");
                     new AdminTask().setVisible(true);
-                    this.setVisible(false);
+                    this.setVisible(false);}
+else{
+    JOptionPane.showMessageDialog(null, "Please Check your entries");
+                    }
 
                 }catch(Exception ee){
                     System.out.println(ee);
