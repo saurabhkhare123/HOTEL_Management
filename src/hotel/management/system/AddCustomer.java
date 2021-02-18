@@ -169,7 +169,7 @@ public class AddCustomer extends JFrame implements ActionListener{
                 int count =0;
 
 
-                if(phone.matches("^(?:(?:\\+|0{0,2})91(\\s*[\\-]\\s*)?|[0]?)?[789]\\d{9}$" )) {
+                if(phone.matches("^(?:(?:\\+|0{0,2})91(\\s*[\\-]\\s*)?|[0]?)?[789]\\d{9}$" )  ) {
                     t6.setBackground(Color.green);
                     count +=1;
 
@@ -190,7 +190,7 @@ public class AddCustomer extends JFrame implements ActionListener{
                 String str = "insert into customer values('"+id+"','"+number+"','"+name+"','"+gender+"','"+phone+"','"+city+"','"+room+"','"+status+"','"+deposit+"')";
                 String str2 = "update room set available = 'Occupied' where room_number='"+room+"'";
                 try{
-                    if(count==2) {
+                    if(count==2 && t3.isValid() && t5.isValid() && t2.isValid() && gender!=null) {
 
 
                         conn c = new conn();
