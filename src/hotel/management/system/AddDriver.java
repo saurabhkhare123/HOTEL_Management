@@ -141,6 +141,10 @@ public class AddDriver extends JFrame implements ActionListener{
                     String avail=null;
                     int count = 0;
 
+                    if (!t1.getText().isEmpty() && !t3.getText().isEmpty() && !t4.getText().isEmpty() && !t2.getText().isEmpty() ){
+                        count++;
+                    }
+
                     if(company.matches("^(?:(?:\\+|0{0,2})91(\\s*[\\-]\\s*)?|[0]?)?[789]\\d{9}$" )) {
                         t3.setBackground(Color.green);
                         count++;
@@ -150,15 +154,8 @@ public class AddDriver extends JFrame implements ActionListener{
 
                     }
 
-                    if(Integer.parseInt(age)>18&&Integer.parseInt(age)<60) {
-                        t2.setBackground(Color.green);
-                        count++;
 
-                    }else {
-                        t2.setBackground(new Color(255, 102, 102));
 
-                    }
-//
                     if(carNumber.matches("^[A-Z]{2}[ -][0-9]{1,2}(?: [A-Z])?(?: [A-Z]*)? [0-9]{4}$")) {
                         t6.setBackground(Color.green);
                         count++;

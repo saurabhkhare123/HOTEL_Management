@@ -143,22 +143,31 @@ public class AddEmployee extends JFrame implements ActionListener {
         try{
 
             if(ae.getSource() == b1){
-                try{
+
                     String name = t1.getText();
                     String age = t2.getText();
                     String Salary = t5.getText();
                     String phone = t6.getText();
                     String aadhar = t7.getText();
                     String email = t8.getText();
+                    String gender = null;
+                    if (r1.isSelected()) {
+                        gender = "Male";
+                    } else if (r2.isSelected()) {
+                        gender = "Female";
+                    }
+                    String job = (String) c1.getSelectedItem();
+
                     int count =0;
-                    if (!t1.getText().isEmpty() && !t5.getText().isEmpty() ){
-                        count++;
+
+                    if (!t1.getText().isEmpty() && !t5.getText().isEmpty() && gender!=null){
+                        count += 1;
                     }
 
 
                     if(phone.matches("^(?:(?:\\+|0{0,2})91(\\s*[\\-]\\s*)?|[0]?)?[789]\\d{9}$" )) {
                         t6.setBackground(Color.green);
-                       count++;
+                       count += 1;
 
                     }else{
                         t6.setBackground(new Color(255,102,102));
@@ -167,7 +176,7 @@ public class AddEmployee extends JFrame implements ActionListener {
 
                     if(aadhar.matches("^[2-9][0-9]{3}\\s\\d{4}\\s\\d{4}$")){
                         t7.setBackground(Color.green);
-                        count++;
+                        count += 1;
 
                     }
                         else{
@@ -176,29 +185,18 @@ public class AddEmployee extends JFrame implements ActionListener {
 
                         if(email.matches(".+\\@.+\\..+")){
                             t8.setBackground(Color.green);
-                            count++;
+                            count += 1;
                         }else{
                             t8.setBackground(new Color(255,102,102));
                         }
 
-                        if(Integer.parseInt(age)>=18 || Integer.parseInt(age)<=60)
-                        {
 
-                            t2.setBackground(Color.green);
-                            count++;
-                        }else{
-                            t2.setBackground(new Color(255,102,102));
-                        }
 
-                        if(count==5) {
 
-                            String gender = null;
-                            if (r1.isSelected()) {
-                                gender = "Male";
-                            } else if (r2.isSelected()) {
-                                gender = "Female";
-                            }
-                            String job = (String) c1.getSelectedItem();
+try{
+
+
+    if(count ==4 ){
                             conn c = new conn();
                             String str = "insert into employee values('" + name + "','" + age + "','" + gender + "','" + job + "','" + Salary + "','" + phone + "','" + aadhar + "','" + email + "')";
 
