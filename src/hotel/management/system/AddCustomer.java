@@ -167,9 +167,11 @@ public class AddCustomer extends JFrame implements ActionListener{
                 String deposit = t5.getText();
                 String phone=t6.getText();
                 int count =0;
+                if (!t2.getText().isEmpty() && !t3.getText().isEmpty() && !t5.getText().isEmpty() && gender!=null){
+                    count +=1;
+                }
 
-
-                if(phone.matches("^(?:(?:\\+|0{0,2})91(\\s*[\\-]\\s*)?|[0]?)?[789]\\d{9}$" )  ) {
+                if(phone.matches("^(?:(?:\\+|0{0,2})91(\\s*[\\-]\\s*)?|[0]?)?[6789]\\d{9}$") ) {
                     t6.setBackground(Color.green);
                     count +=1;
 
@@ -190,7 +192,7 @@ public class AddCustomer extends JFrame implements ActionListener{
                 String str = "insert into customer values('"+id+"','"+number+"','"+name+"','"+gender+"','"+phone+"','"+city+"','"+room+"','"+status+"','"+deposit+"')";
                 String str2 = "update room set available = 'Occupied' where room_number='"+room+"'";
                 try{
-                    if(count==2 ) {
+                    if(count==3 ) {
 
 
                         conn c = new conn();
