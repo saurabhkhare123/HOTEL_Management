@@ -186,7 +186,7 @@ public class AddEmployee extends JFrame implements ActionListener {
                             t2.setBackground(new Color(255,102,102));
                         }
 
-                        if(count == 4) {
+                        if(count == 4 && t1.isValid() && t5.isValid() && t2.isValid() ) {
 
                             String gender = null;
                             if (r1.isSelected()) {
