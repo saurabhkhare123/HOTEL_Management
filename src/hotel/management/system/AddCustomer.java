@@ -11,7 +11,7 @@ public class AddCustomer extends JFrame implements ActionListener{
 
     private JTextField t1,t2,t3,t4,t5,t6;
     private JButton b1,b2;
-    private JComboBox c1;
+    private JComboBox c1,c3;
     private Choice c2;
     private JRadioButton r1,r2;
 
@@ -100,13 +100,13 @@ public class AddCustomer extends JFrame implements ActionListener{
         add(c2);
 
 
-        JLabel l8 = new JLabel("Checked In");
+        JLabel l8 = new JLabel("Checked in");
         l8.setBounds(50,380,200,30);
         add(l8);
 
-        t4=new JTextField();
-        t4.setBounds(250,380,150,30);
-        add(t4);
+        c3=new JComboBox(new String[] {"Yes","No"});
+        c3.setBounds(250,380,150,30);
+        add(c3);
 
         JLabel l9 = new JLabel("Deposit");
         l9.setBounds(50,420,200,30);
@@ -163,7 +163,7 @@ public class AddCustomer extends JFrame implements ActionListener{
 
                 String city = t3.getText();
                 String room = c2.getSelectedItem();
-                String status = t4.getText();
+                String status = (String)c3.getSelectedItem();
                 String deposit = t5.getText();
                 String phone=t6.getText();
                 int count =0;
