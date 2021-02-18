@@ -190,7 +190,7 @@ public class AddCustomer extends JFrame implements ActionListener{
                 String str = "insert into customer values('"+id+"','"+number+"','"+name+"','"+gender+"','"+phone+"','"+city+"','"+room+"','"+status+"','"+deposit+"')";
                 String str2 = "update room set available = 'Occupied' where room_number='"+room+"'";
                 try{
-                    if(count==2 && t3.isValid() && t5.isValid() && t2.isValid() && gender!=null) {
+                    if(count==2 ) {
 
 
                         conn c = new conn();

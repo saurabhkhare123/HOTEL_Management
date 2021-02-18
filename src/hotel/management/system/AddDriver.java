@@ -177,7 +177,7 @@ public class AddDriver extends JFrame implements ActionListener{
 
                     }
 
-                    if(count==4 && t3.isValid() && t5.isValid() && t1.isValid() && t3.isValid() && t4.isValid()   ) {
+                    if(count==4) {
 
                         String str = "INSERT INTO driver values( '" + name + "', '" + age + "', '" + gender + "','" + company + "', '" + brand + "', '" + dl + "','" + carNumber + "','" + avail + "')";
 

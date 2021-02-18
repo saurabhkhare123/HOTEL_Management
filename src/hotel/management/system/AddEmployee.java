@@ -163,7 +163,7 @@ public class AddEmployee extends JFrame implements ActionListener {
 
                     if(aadhar.matches("^[2-9][0-9]{3}\\s\\d{4}\\s\\d{4}$")){
                         t7.setBackground(Color.green);
-                        count = +1;
+                        count++;
 
                     }
                         else{
@@ -172,7 +172,7 @@ public class AddEmployee extends JFrame implements ActionListener {
 
                         if(email.matches(".+\\@.+\\..+")){
                             t8.setBackground(Color.green);
-                            count = +1;
+                            count++;
                         }else{
                             t8.setBackground(new Color(255,102,102));
                         }
@@ -181,12 +181,12 @@ public class AddEmployee extends JFrame implements ActionListener {
                         {
 
                             t2.setBackground(Color.green);
-                            count = +1;
+                            count++;
                         }else{
                             t2.setBackground(new Color(255,102,102));
                         }
 
-                        if(count == 4 && t1.isValid() && t5.isValid() && t2.isValid() ) {
+                        if(count==4) {
 
                             String gender = null;
                             if (r1.isSelected()) {
