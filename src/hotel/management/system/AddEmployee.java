@@ -151,10 +151,14 @@ public class AddEmployee extends JFrame implements ActionListener {
                     String aadhar = t7.getText();
                     String email = t8.getText();
                     int count =0;
+                    if (!t1.getText().isEmpty() && !t5.getText().isEmpty() ){
+                        count++;
+                    }
+
 
                     if(phone.matches("^(?:(?:\\+|0{0,2})91(\\s*[\\-]\\s*)?|[0]?)?[789]\\d{9}$" )) {
                         t6.setBackground(Color.green);
-                       count = +1;
+                       count++;
 
                     }else{
                         t6.setBackground(new Color(255,102,102));
@@ -186,7 +190,7 @@ public class AddEmployee extends JFrame implements ActionListener {
                             t2.setBackground(new Color(255,102,102));
                         }
 
-                        if(count==4) {
+                        if(count==5) {
 
                             String gender = null;
                             if (r1.isSelected()) {
